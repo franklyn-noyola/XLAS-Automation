@@ -1,4 +1,4 @@
-package CourseCatalog;
+package AIRBUBS_XLAS_JENKINS.CourseCatalog;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
