@@ -106,26 +106,6 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="AIRBUS JENKINS">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="CourseCatalog.DeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
-            <test name="CourseCatalog.StandardCourseCatalogCreation" todir="${junit.output.dir}"/>
-            <test name="CourseCatalog.UrgentCourseCatalog" todir="${junit.output.dir}"/>
-            <test name="CourseCatalog.UrgentDeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
-            <test name="CourseCatalog.ValidationCourseCatalog" todir="${junit.output.dir}"/>
-            <test name="CourseModificationRequest.StandardCourseModificationRequest" todir="${junit.output.dir}"/>
-            <test name="CourseModificationRequest.ValidationCourseModificationRequest" todir="${junit.output.dir}"/>
-            <test name="CustomTask.CustomTask" todir="${junit.output.dir}"/>
-            <test name="SessionCatalog.SessionCatalogCancellation" todir="${junit.output.dir}"/>
-            <test name="SessionCatalog.SessionCatalogCompleted" todir="${junit.output.dir}"/>
-            <test name="SessionCatalog.SessionModificationRequest" todir="${junit.output.dir}"/>
-            <test name="SessioneLearningRegularisationRequest.SessionRegularisationgRequest" todir="${junit.output.dir}"/>
-            <test name="SessioneLearningRegularisationRequest.SessioneeLearninRequest" todir="${junit.output.dir}"/>
-            <classpath refid="AIRBUS JENKINS.classpath"/>
-        </junit>
-    </target>
     <target name="CustomTask">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
