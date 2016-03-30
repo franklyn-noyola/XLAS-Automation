@@ -195,43 +195,11 @@
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
-    <target name="DeliveryDataCourseCatalog (1)">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.DeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
-            <classpath refid="AIRBUS JENKINS.classpath"/>
-        </junit>
-    </target>
-    <target name="SessioneeLearninRequest (1)">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="AIRBUBS_XLAS_JENKINS.SessioneLearningRegularisationRequest.SessioneeLearninRequest" todir="${junit.output.dir}"/>
-            <classpath refid="AIRBUS JENKINS.classpath"/>
-        </junit>
-    </target>
-    <target name="SessionRegularisationgRequest (1)">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="AIRBUBS_XLAS_JENKINS.SessioneLearningRegularisationRequest.SessionRegularisationgRequest" todir="${junit.output.dir}"/>
-            <classpath refid="AIRBUS JENKINS.classpath"/>
-        </junit>
-    </target>
-    <target name="StandardCourseCatalogCreation (1)">
+    <target name="StandardCourseCatalogCreation">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.StandardCourseCatalogCreation" todir="${junit.output.dir}"/>
-            <classpath refid="AIRBUS JENKINS.classpath"/>
-        </junit>
-    </target>
-    <target name="UrgentDeliveryDataCourseCatalog (1)">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.UrgentDeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
