@@ -12,7 +12,7 @@ import org.openqa.selenium.*;
 public class SessionCatalogCancellation extends SessionCatalogTemplate {
 	
 @Test		
-	public  void SessionCatalog() throws Exception{	
+	public  void SessionCatalogCancellationExecution() throws Exception{	
 				Thread.sleep(500);
 				MainTask = "Course Catalog";
 				SessionChoice = "Cancellation";

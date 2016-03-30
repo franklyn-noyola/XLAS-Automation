@@ -12,7 +12,7 @@ import org.openqa.selenium.*;
 public class SessionCatalogCompleted extends SessionCatalogTemplate {
 	
 @Test		
-	public  void SessionCatalog() throws Exception{	
+	public  void SessionCatalogComnpletedExecution() throws Exception{	
 				Thread.sleep(500);
 				MainTask = "Course Catalog";
 				SessionChoice = "Completed";
