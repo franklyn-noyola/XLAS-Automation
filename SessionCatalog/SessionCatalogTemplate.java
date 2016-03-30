@@ -82,43 +82,10 @@ public static void SessionFields() throws Exception{
 				Thread.sleep(1000);
 				driver.findElement(By.id("edit-issue-submit")).click();
 				Thread.sleep(3500);	
-				if (!SessionChoice.equals("SMR")){
-					AIRBUBS_XLAS_JENKINS.SubTasks.SubTasksCreation.SessionClosure();
-					Thread.sleep(1000);
-				}	
-				Thread.sleep(1000);
-				if (SessionChoice.equals("Completed")){
-					Thread.sleep(1000);
-					driver.findElement(By.linkText("Session Closure")).click();
-					Thread.sleep(2000);
-					AIRBUBS_XLAS_JENKINS.SubTasks.SubTasksWorkFlow.SubTaskWorkflow();
-					Thread.sleep(2000);
-					driver.findElement(By.id("parent_issue_summary")).click();
-					Thread.sleep(3000);
-				}
-				if (SessionChoice.equals("Cancellation")){
-					Thread.sleep(1000);
-					driver.findElement(By.linkText("Session Closure")).click();
-					Thread.sleep(1000);
-					if (!Assignee.equals("TEST USER: XLAS Full Access")){
-						driver.findElement(By.id("assign-to-me")).click();
-						Thread.sleep(4000);
-					}
-					Thread.sleep(1000);
-					driver.findElement(By.id("action_id_51")).click();
-					Thread.sleep(1000);
-					driver.findElement(By.id("customfield_10196")).clear();
-					driver.findElement(By.id("customfield_10196")).sendKeys("It has been cancelled");
-					driver.findElement(By.id("issue-workflow-transition-submit")).click();
-					Thread.sleep(3000);
-					driver.findElement(By.id("parent_issue_summary")).click();
-					Thread.sleep(3000);
-				}
-				Thread.sleep(1000);
 				RequesSTask = driver.findElement(By.id("key-val")).getText();
 				Thread.sleep(2000);				
 					StatR = driver.findElement(By.id("status-val")).getText();
-					Thread.sleep(1000);	
+					Thread.sleep(2000);	
 				switch(StatR){		
 				case "DATA ENTRY":									Thread.sleep(3000);
 																	driver.findElement(By.id("action_id_11")).click();

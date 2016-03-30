@@ -115,6 +115,14 @@
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
+     <target name="UrgentCourseCatalog">
+     	<mkdir dir="${junit.output.dir}"/>
+        	<junit fork="yes" printsummary="withOutAndErr">
+            	<formatter type="xml"/>
+                	<test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.UrgentCourseCatalog" todir="${junit.output.dir}"/>
+                    	<classpath refid="AIRBUS JENKINS.classpath"/>
+			</junit>
+       </target>            	
     <target name="SessionCatalogCancellation">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -163,14 +171,14 @@
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
-    <target name="UrgentCourseCatalog">
+    <target name="DeliveryDataCourseCatalog">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.UrgentCourseCatalog" todir="${junit.output.dir}"/>
+            <test name="AIRBUBS_XLAS_JENKINS.CourseCatalog.DeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
-    </target>
+    </target>          	
     <target name="UrgentDeliveryDataCourseCatalog">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">

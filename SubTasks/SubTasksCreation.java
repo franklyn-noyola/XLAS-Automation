@@ -9,7 +9,7 @@ public class SubTasksCreation extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseC
 	public static String Subpath = "issuetype-field";
 	public static String TimeDays = "customfield_10117";
 	
-  public static void SessionClosure() throws Exception{
+/*  public static void SessionClosure() throws Exception{
 	  		Thread.sleep(3000);
 	  		driver.findElement(By.id("opsbar-operations_more")).click();
 	  		driver.findElement(By.id("create-subtask")).click();
@@ -32,5 +32,5 @@ public class SubTasksCreation extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseC
 		    Thread.sleep(3000);	    
 
 	}
-  
+  */
 }
