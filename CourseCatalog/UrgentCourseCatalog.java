@@ -13,7 +13,7 @@ public class UrgentCourseCatalog extends CourseCatalogTemplate{
 
 @Test
 public void UrgentCourse() throws Exception  {
-			MainTask = "Course Catalog";
+			MainTask = "Course Catalog";			
 			Login();			
 			GeneralTab();
 			Thread.sleep(1000);
@@ -36,8 +36,7 @@ public void UrgentCourse() throws Exception  {
 					fail("Duplicate Key Has been detecteed. No Course created");
 					return;
 			}
-				Thread.sleep(1000);
-				
+				Thread.sleep(1000);				
 				driver.findElement(By.cssSelector("#action_id_181 > span.trigger-label")).click();
 				PricesInternationalTab();
 				PricesUKTab();

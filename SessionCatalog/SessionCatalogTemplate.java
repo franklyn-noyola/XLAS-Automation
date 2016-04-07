@@ -8,9 +8,11 @@ import org.openqa.selenium.support.ui.Select;
 public class SessionCatalogTemplate extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate{
 		
 		public static String ValidationData = "NoValidation";
-		public static String StatR;
-		public static String RequesSTask;
-		public static String SessionChoice;
+		public static String StatR;		
+		public static String SessionChoice = "NoChoice";
+		public static String SessionId;
+		public static String Workflow;
+		public static String Status;
 
 public static void SessionFields() throws Exception{
 	Thread.sleep(1000);
@@ -25,8 +27,9 @@ public static void SessionFields() throws Exception{
 	Thread.sleep(1000);
 	new Select(driver.findElement(By.id("location"))).selectByVisibleText("Dominican Republic");
 	driver.findElement(By.id("sData")).click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	driver.findElement(By.id("cData")).click();
+	Thread.sleep(2000);
 	driver.findElement(By.cssSelector("#add_qecustomfield_10160_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
 	Thread.sleep(1000);
 	driver.findElement(By.id("SAP_ID")).sendKeys("12345678");
@@ -34,22 +37,21 @@ public static void SessionFields() throws Exception{
 	driver.findElement(By.id("Abbreviation")).sendKeys("ABR");
 	driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 	driver.findElement(By.id("sData")).click();
-	Thread.sleep(1000);
+	Thread.sleep(3000);
 	driver.findElement(By.id("cData")).click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	driver.findElement(By.cssSelector("#add_qecustomfield_11042_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	new Select (driver.findElement(By.id("Language"))).selectByIndex(1);
 	Thread.sleep(1000);
 	driver.findElement(By.id("sData")).click();
-	Thread.sleep(1000);
+	Thread.sleep(3000);
 	driver.findElement(By.id("cData")).click();
-	Thread.sleep(1000);
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	new Select(driver.findElement(By.id("customfield_11043"))).selectByVisibleText("Yes");
 	//Start Rooms Grid.
 	driver.findElement(By.cssSelector("#add_qecustomfield_10162_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
-	Thread.sleep(600);
+	Thread.sleep(1000);
 	driver.findElement(By.id("SAP_ID")).sendKeys("12345678");
 	Thread.sleep(1000);
 	driver.findElement(By.id("Abbreviation")).sendKeys("ABR");
@@ -58,8 +60,9 @@ public static void SessionFields() throws Exception{
 	driver.findElement(By.id("RoomBuildingDescription")).sendKeys("Room Bookin");
 	Thread.sleep(1000);
 	driver.findElement(By.id("sData")).click();
-	Thread.sleep(1000);
+	Thread.sleep(3000);
 	driver.findElement(By.id("cData")).click();
+	Thread.sleep(2000);
 
 }
 
@@ -82,7 +85,11 @@ public static void SessionFields() throws Exception{
 				Thread.sleep(1000);
 				driver.findElement(By.id("edit-issue-submit")).click();
 				Thread.sleep(3500);	
-				RequesSTask = driver.findElement(By.id("key-val")).getText();
+				SessionId = driver.findElement(By.id("key-val")).getText();
+				if (SessionChoice.equals("SubTaskCreation")){
+					return;
+				}
+						
 				Thread.sleep(2000);				
 					StatR = driver.findElement(By.id("status-val")).getText();
 					Thread.sleep(2000);	
@@ -90,12 +97,12 @@ public static void SessionFields() throws Exception{
 				case "DATA ENTRY":									Thread.sleep(3000);
 																	driver.findElement(By.id("action_id_11")).click();
 																	Thread.sleep(3000);
-				case "PENDING QUALITY CHECK":						Thread.sleep(3000);
-																			Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-																			if (!Assignee.equals("TEST USER: XLAS Full Access")){
-																				driver.findElement(By.id("assign-to-me")).click();
-																				Thread.sleep(4000);
-																			}						
+				case "PENDING QUALITY CHECK":						Thread.sleep(2000);
+																			//Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
+																			//if (!Assignee.equals("TEST USER: XLAS Full Access")){
+																	driver.findElement(By.id("assign-to-me")).click();
+																			//	Thread.sleep(4000);
+																			//}						
 																			Thread.sleep(3000);
 																	driver.findElement(By.id("action_id_21")).click();
 				case "QUALITY CHECK IN PROGRESS":					Thread.sleep(4000);
@@ -115,7 +122,7 @@ public static void SessionFields() throws Exception{
 																	driver.findElement(By.id("issue-workflow-transition-submit")).click();
 																	Thread.sleep (9000);
 																	String Title = driver.getTitle();
-																	Thread.sleep (2000);																			
+																	Thread.sleep (3000);																			
 																	if (!Title.contains("LMS Entry Success")){
 																		if (SessionChoice.equals("Completed")){
 																			SessionWCompleted();
@@ -125,6 +132,9 @@ public static void SessionFields() throws Exception{
 																		}
 																		if (SessionChoice.equals("SMR")){
 																			return;
+																		}
+																		if (SessionChoice.equals("SubtaskWorkflow")){
+																			return;																			
 																		}
 																		return;
 																	}
@@ -150,6 +160,9 @@ public static void SessionFields() throws Exception{
 																			}
 																			if (SessionChoice.equals("SMR")){
 																				return;
+																			}
+																			if (SessionChoice.equals("SubtaskWorkflow")){
+																				return;																			
 																			}
 				}
 																				break;
@@ -205,6 +218,10 @@ public static void SessionFields() throws Exception{
 		case "CANCELATTION IN PROGRESS"	:								Thread.sleep(1000);
 																		driver.findElement(By.id("action_id_111")).click();
 																		Thread.sleep(2000);
+																		new Select(driver.findElement(By.id("customfield_10100"))).selectByVisibleText("No budget");																		
+																		driver.findElement(By.xpath("(//textarea[@id='comment'])[2]")).sendKeys("There is not budget for this Project");
+																		driver.findElement(By.id("issue-workflow-transition-submit")).click();
+																		Thread.sleep(3000);																		
 																		break;
 																	
 											
