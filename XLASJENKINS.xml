@@ -78,6 +78,14 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <target name="CourseModificationRequestDeliveryData">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="AIRBUBS_XLAS_JENKINS.CourseModificationRequest.CourseModificationRequestDeliveryData" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
     <target name="CustomTask">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -163,6 +171,14 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="AIRBUBS_XLAS_JENKINS.SubTasks.SubTasksWorkFlow" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SubTasksWorkFlowCancelled">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="AIRBUBS_XLAS_JENKINS.SubTasks.SubTasksWorkFlowCancelled" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
