@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="S4KYDP6" name="SubTasks.SubTasksCreation" tests="1" time="106.505" timestamp="2016-04-12T14:39:16">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="env.DEFLOGDIR" value="C:\ProgramData\McAfee\DesktopProtection" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/C:/Users/C9854448/Desktop/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates/" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="os.name" value="Windows 7" />
+    <property name="env.PYTHONPATH" value="C:\Program Files\VMware\CobraWinLDTP\" />
+    <property name="env.FP_NO_HOST_CHECK" value="NO" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_77\lib\resources.jar;C:\Program Files\Java\jre1.8.0_77\lib\rt.jar;C:\Program Files\Java\jre1.8.0_77\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_77\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_77\lib\jce.jar;C:\Program Files\Java\jre1.8.0_77\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_77\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_77\classes" />
+    <property name="env.COMPUTERNAME" value="S4KYDP6" />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030" />
+    <property name="java.runtime.version" value="1.8.0_77-b03" />
+    <property name="env.HOMEPATH" value="\Users\C9854448" />
+    <property name="user.name" value="C9854448" />
+    <property name="user.language" value="en" />
+    <property name="env.windows_tracing_flags" value="3" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_77\bin" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.name" value="AIRBUS JENKINS" />
+    <property name="java.version" value="1.8.0_77" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="x86 Family 6 Model 42 Stepping 7, GenuineIntel" />
+    <property name="user.timezone" value="" />
+    <property name="env.asl.log" value="Destination=file" />
+    <property name="env.Classpath" value="C:\Users\C9854448\workspace\AIRBUS XLAS\AIRBUS XLAS\AIRBUS_XLAS;C:\AIRBUS Java;C:\Users\C9854448\workspace\AIRBUS STANDALONE\bin;C:\Users\C9854448\workspace\AIRBUS STANDALONE\lib\*;C:\Users\C9854448\.jenkins\workspace\AIRBUS JENKINS" />
+    <property name="env.TEMP" value="C:\Users\C9854448\AppData\Local\Temp" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_77\lib\endorsed" />
+    <property name="env.VSEDEFLOGDIR" value="C:\ProgramData\McAfee\DesktopProtection" />
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="ECLIPSE_HOME" value="../../../../Users/C9854448/Desktop/eclipse" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_77" />
+    <property name="env.PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" />
+    <property name="env.APPDATA" value="C:\Users\C9854448\AppData\Roaming" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="env.windows_tracing_logfile" value="C:\BVTBin\Tests\installpackage\csilogfile.log" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="env.ComSpec" value="C:\Windows\system32\cmd.exe" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+    <property name="ant.file" value="C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\XLASJENKINS..xml" />
+    <property name="os.version" value="6.1" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="25.77-b03" />
+    <property name="user.variant" value="" />
+    <property name="env.USERPROFILE" value="C:\Users\C9854448" />
+    <property name="ant.library.dir" value="C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_74" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="env.TMP" value="C:\Users\C9854448\AppData\Local\Temp" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="ant.file.AIRBUS JENKINS" value="C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\XLASJENKINS..xml" />
+    <property name="env.webdriver.ie.driver" value="C:\selenium" />
+    <property name="user.script" value="" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/Users/C9854448/Desktop/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts/" />
+    <property name="user.home" value="C:\Users\C9854448" />
+    <property name="target" value="1.7" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="2" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_77\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/C9854448/Desktop/eclipse/jre/bin/client;C:/Users/C9854448/Desktop/eclipse/jre/bin;C:/Users/C9854448/Desktop/eclipse/jre/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\pik\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Users\C9854448\AppData\Local\Mozilla Firefox;C:\selenium;C:\Program Files\VMware\CobraWinLDTP\;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\HashiCorp\Vagrant\bin;C:\Program Files\MiKTeX 2.9\miktex\bin\; C:\Program Files\Java\jdk1.8.0_74\bin;C:\AIRBUS Java\libs;C:\selenium;C:\Users\C9854448\Desktop\eclipse;;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="env.USERDNSDOMAIN" value="ACS-BCN.COM" />
+    <property name="property.ui.testing2" value="hey" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="java.class.path" value="C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\bin;C:\Users\C9854448\Desktop\eclipse\plugins\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\C9854448\Desktop\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar;C:\selenium\selenium-2.52.0\libs\apache-mime4j-0.6.jar;C:\selenium\selenium-2.52.0\libs\bsh-2.0b4.jar;C:\selenium\selenium-2.52.0\libs\cglib-nodep-2.1_3.jar;C:\selenium\selenium-2.52.0\libs\commons-codec-1.10.jar;C:\selenium\selenium-2.52.0\libs\commons-exec-1.3.jar;C:\selenium\selenium-2.52.0\libs\commons-io-2.4.jar;C:\selenium\selenium-2.52.0\libs\commons-logging-1.2.jar;C:\selenium\selenium-2.52.0\libs\gson-2.3.1.jar;C:\selenium\selenium-2.52.0\libs\guava-19.0.jar;C:\selenium\selenium-2.52.0\libs\hamcrest-core-1.3.jar;C:\selenium\selenium-2.52.0\libs\hamcrest-library-1.3.jar;C:\selenium\selenium-2.52.0\libs\httpclient-4.5.1.jar;C:\selenium\selenium-2.52.0\libs\httpcore-4.4.3.jar;C:\selenium\selenium-2.52.0\libs\httpmime-4.5.jar;C:\selenium\selenium-2.52.0\libs\jcommander-1.48.jar;C:\selenium\selenium-2.52.0\libs\jna-4.1.0.jar;C:\selenium\selenium-2.52.0\libs\jna-platform-4.1.0.jar;C:\selenium\selenium-2.52.0\libs\junit-4.12.jar;C:\selenium\selenium-2.52.0\libs\netty-3.5.7.Final.jar;C:\selenium\selenium-2.52.0\libs\phantomjsdriver-1.2.1.jar;C:\selenium\selenium-2.52.0\libs\testng-6.9.9.jar;C:\selenium\selenium-2.52.0\selenium-java-2.52.0.jar;C:\selenium\selenium-2.52.0\selenium-java-2.52.0-srcs.jar;C:\selenium\selenium-server-standalone-2.52.0.jar;C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-launcher.jar;C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant.jar;C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-junit.jar;C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-junit4.jar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner SubTasks.SubTasksCreation filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\junit\TEST-SubTasks.SubTasksCreation.xml crashfile=C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\junitvmwatcher8232261668581411278.properties propsfile=C:\Program Files\Jenkins\workspace\AIRBUS JENKINS\junit6654593622550630214.properties" />
+    <property name="ant.file.type.AIRBUS JENKINS" value="file" />
+    <property name="env.My SQL" value="C:\Users\C9854448\Documents\mysql-5.6.23-win32\bin" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="env.LOGONSERVER" value="\\BCNDC2" />
+    <property name="env.windir" value="C:\Windows" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="x86" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="env.ProgramFiles" value="C:\Program Files" />
+    <property name="env.ANT_HOME" value="C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030" />
+    <property name="java.io.tmpdir" value="C:\Users\C9854448\AppData\Local\Temp\" />
+    <property name="env.PROCESSOR_REVISION" value="2a07" />
+    <property name="env.UATDATA" value="C:\Windows\system32\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77" />
+    <property name="eclipse.pdebuild.home" value="/C:/Users/C9854448/Desktop/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/./" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.RUBYLIB" value="C:\Program Files\VMware\CobraWinLDTP\ldtp\" />
+    <property name="env.SystemRoot" value="C:\Windows" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="os.arch" value="x86" />
+    <property name="env.PERL5LIB" value="C:\Program Files\VMware\CobraWinLDTP\ldtp\" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_77\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\C9854448\AppData\Local" />
+    <property name="user.dir" value="C:\Program Files\Jenkins\workspace\AIRBUS JENKINS" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+    <property name="env.Path" value="C:/Users/C9854448/Desktop/eclipse/jre/bin/client;C:/Users/C9854448/Desktop/eclipse/jre/bin;C:/Users/C9854448/Desktop/eclipse/jre/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\pik\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Users\C9854448\AppData\Local\Mozilla Firefox;C:\selenium;C:\Program Files\VMware\CobraWinLDTP\;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\HashiCorp\Vagrant\bin;C:\Program Files\MiKTeX 2.9\miktex\bin\; C:\Program Files\Java\jdk1.8.0_74\bin;C:\AIRBUS Java\libs;C:\selenium;C:\Users\C9854448\Desktop\eclipse;" />
+    <property name="basedir" value="C:\Program Files\Jenkins\workspace\AIRBUS JENKINS" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="C:\Users\C9854448\Desktop\eclipse\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant.jar" />
+    <property name="env.USERNAME" value="C9854448" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="source" value="1.7" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="env.VS100COMNTOOLS" value="C:\Program Files\Microsoft Visual Studio 10.0\Common7\Tools\" />
+    <property name="env.USERDOMAIN" value="ACS-BCN" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="SubTasksCreation (1),junitreport" />
+    <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+  </properties>
+  <testcase classname="SubTasks.SubTasksCreation" name="SubtasksCreationExecution" time="106.16">
+    <error message="Element is not clickable at point (410.5, 554). Other element would receive the click: &lt;td class=&quot;EditButton&quot;&gt;&lt;/td&gt;&#xa;Command duration or timeout: 90 milliseconds&#xa;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;&#xa;System info: host: &apos;S4KYDP6&apos;, ip: &apos;172.30.223.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#xa;Session ID: eced8cdc-d303-4e5c-8197-5eda3a2423aa" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Element is not clickable at point (410.5, 554). Other element would receive the click: &lt;td class=&quot;EditButton&quot;&gt;&lt;/td&gt;
+Command duration or timeout: 90 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;S4KYDP6&apos;, ip: &apos;172.30.223.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: eced8cdc-d303-4e5c-8197-5eda3a2423aa
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at CourseCatalog.CourseCatalogTemplate.ResourcesTab(CourseCatalogTemplate.java:216)
+	at CourseCatalog.StandardCourseCatalogCreation.CourseStandard(StandardCourseCatalogCreation.java:31)
+	at SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution(SessionCatalogCompleted.java:21)
+	at SubTasks.SubTasksCreation.SubtasksCreationExecution(SubTasksCreation.java:18)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
