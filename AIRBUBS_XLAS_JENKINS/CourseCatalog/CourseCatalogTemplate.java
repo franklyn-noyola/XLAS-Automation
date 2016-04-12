@@ -135,7 +135,7 @@ public static void Login() throws Exception{
 		driver.findElement(By.id("CostCenter")).sendKeys("1245788");
 		driver.findElement(By.id("ControllingArea")).sendKeys("65874545");
 		driver.findElement(By.id(SubmitGrid)).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.findElement(By.id(CancelGrid)).click();		
 		//End Cost Center Grid
 		Thread.sleep(3000);
@@ -175,10 +175,10 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("WorkingTimeException"))).selectByVisibleText("86 %");
 			new Select(driver.findElement(By.id("InternalExternal"))).selectByVisibleText("Internal");
 			driver.findElement(By.id(SubmitGrid)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Accessibility Grid ends
-			Thread.sleep(4000);
+			Thread.sleep(3000);
 			new Select(driver.findElement(By.id("customfield_10883"))).selectByVisibleText("Yes");//Accessiblity Offshore
 			new Select(driver.findElement(By.id("customfield_10866"))).selectByVisibleText("No");//Visible in HR
 			new Select(driver.findElement(By.id("customfield_10867"))).selectByVisibleText("Yes");//Visible External
@@ -205,9 +205,9 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 			driver.findElement(By.id("Email")).sendKeys("franklyn.noyola@gmail.com");
 			driver.findElement(By.id("Phone")).sendKeys("98665632332");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id(SubmitGrid)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Training Provider Grid Ends
 			Thread.sleep(2000);
@@ -223,10 +223,10 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 			driver.findElement(By.id("Email")).sendKeys("franklyn.noyola@xerox.com");
 			driver.findElement(By.id(SubmitGrid)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Trainer (Internal and External) grid ends
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			driver.findElement(By.id("customfield_10874")).sendKeys("Trainer additional comment"); //Trainer additional comment
 			Thread.sleep(2000);
 		}
