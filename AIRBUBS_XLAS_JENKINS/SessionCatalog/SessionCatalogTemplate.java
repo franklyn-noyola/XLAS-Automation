@@ -1,11 +1,11 @@
-package AIRBUBS_XLAS_JENKINS.SessionCatalog;
+package SessionCatalog;
 
 import java.util.Random;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
-public class SessionCatalogTemplate extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate{
+public class SessionCatalogTemplate extends CourseCatalog.CourseCatalogTemplate{
 		
 		public static String ValidationData = "NoValidation";
 		public static String StatR;		
