@@ -1,4 +1,4 @@
-package AIRBUBS_XLAS_JENKINS.CourseCatalog;
+package CourseCatalog;
 
 
 
@@ -52,7 +52,7 @@ public void CourseStandardExecution () throws Exception  {
 			    	Thread.sleep(1500);
 			    	CourseExecution();
 			    	Thread.sleep(1500);
-			    		if (TaskRequest.equals("Session")){
+			    		if (TaskRequest.equals("Session") || CRM.equals("Course Modification Request")){
 			    				return;
 		    		}
 		    				Thread.sleep(1500);

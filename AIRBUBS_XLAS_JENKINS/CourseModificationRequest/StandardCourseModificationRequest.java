@@ -1,4 +1,4 @@
-package AIRBUBS_XLAS_JENKINS.CourseModificationRequest;
+package CourseModificationRequest;
 
 
 
@@ -14,12 +14,13 @@ public class StandardCourseModificationRequest extends CourseModificationRequest
 @Test		
 	public  void CourseModificationRequest() throws Exception{
 				MainTask = "Course Catalog";
-				AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate.Login();				
+				CRM = "Course Modification Request";
+				AIRBUBS_XLAS_JENKINS.CourseCatalog.StandardCourseCatalogCreation();				
 				Thread.sleep(1000);		  		
 		  		driver.findElement(By.id("create_link")).click();
 		  		Thread.sleep(1000);	  			
 		  		driver.findElement(By.id(CreateButton)).click();				  					  		
-		  		AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate.GeneralTab();
+		  		CourseCatalogTemplate.GeneralTab();
 		  		AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate.UKTab();
 		  		AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate.SPTab();
 		  		AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate.FRTab();
