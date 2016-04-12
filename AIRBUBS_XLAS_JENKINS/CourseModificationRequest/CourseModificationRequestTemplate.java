@@ -26,7 +26,9 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 						driver.findElement(By.name("customfield_10004")).sendKeys("31/Dec/2017");//Validity End Date
 						new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
 						driver.findElement(By.id("edit-issue-submit")).click();
-						Thread.sleep(3000);						
+						Thread.sleep(3000);	
+						RequesTask = driver.findElement(By.id("key-val")).getText();
+						Thread.sleep(1500);
 						driver.findElement(By.id("action_id_201")).click();
 						Thread.sleep(4000);						
 						Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
