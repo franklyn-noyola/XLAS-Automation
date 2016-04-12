@@ -10,7 +10,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		SessionChoice = "SubtaskWorkflow";
 		SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
 		Thread.sleep(1000);
-		SubTasks.SubTasksCreation.SubtasksCreation();
+		SubTasksCreation.SubtasksCreation();
 		Thread.sleep(1000);
 		SubtasksWorkflowExecution();
 }
