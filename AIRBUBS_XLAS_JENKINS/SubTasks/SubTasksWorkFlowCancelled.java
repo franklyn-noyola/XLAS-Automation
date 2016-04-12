@@ -59,7 +59,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		Thread.sleep(1000);
 		driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);
-	driver.findElement(By.linkText("Attendance Sheet and Evaluation Forms Delivery")).click();
+	driver.findElement(By.partialLinkText("Attendance Sheet and Evaluation Forms Delivery")).click();
 		Workflow = "Workflow2";
 		Thread.sleep(1000);
 		SubTaskWorkflow();
@@ -67,9 +67,9 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);
 	driver.findElement(By.linkText("Vendor Management")).click();
-		Workflow = "VendorManagement";
+		Workflow = "Workflow1";
 		Thread.sleep(1000);		
-		VendorManagement();
+		SubTaskWorkflow();
 		Thread.sleep(1000);
 		driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);
@@ -88,16 +88,16 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);			
 	driver.findElement(By.linkText("AG Session Overview Form")).click();
-		Workflow = "AGOver";
+		Workflow = "Workflow3";
 		Thread.sleep(1000);		
-		SessionOverviewFormW();
+		SubTaskWorkflow();
 		Thread.sleep(3000);
 	driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);
 	driver.findElement(By.linkText("Xerox Session Overview Form")).click();
-		Workflow = "XeroxOver";
+		Workflow = "Workflow3";
 		Thread.sleep(1000);		
-		SessionOverviewFormW();
+		SubTaskWorkflow();
 		Thread.sleep(3000);
 	driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);	
@@ -115,7 +115,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 			Thread.sleep(4000);
 		}
 		if (Workflow.equals("Workflow1")){
-			driver.findElement(By.id("action_id_11")).click();
+			driver.findElement(By.id("action_id_21")).click();
 			Thread.sleep(1000);			
 			driver.findElement(By.id("customfield_10196")).sendKeys("This SubTask has been cancelled");
 			driver.findElement(By.id("issue-workflow-transition-submit")).click();
@@ -123,7 +123,15 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 			return;
 		}
 		if (Workflow.equals("Workflow2")){
-			driver.findElement(By.id("action_id_11")).click();
+			driver.findElement(By.id("action_id_51")).click();
+			Thread.sleep(1000);			
+			driver.findElement(By.id("customfield_10196")).sendKeys("This SubTask has been cancelled");
+			driver.findElement(By.id("issue-workflow-transition-submit")).click();
+			Thread.sleep(3000);
+			return;
+		}
+		if (Workflow.equals("Workflow3")){
+			driver.findElement(By.id("action_id_131")).click();
 			Thread.sleep(1000);			
 			driver.findElement(By.id("customfield_10196")).sendKeys("This SubTask has been cancelled");
 			driver.findElement(By.id("issue-workflow-transition-submit")).click();
@@ -131,99 +139,8 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 			return;
 		}
 		
-		Thread.sleep(3000);
-	  		Status = driver.findElement(By.id("status-val")).getText();	  		
-		switch (Status){									
-		case "OPEN / UPDATE":				driver.findElement(By.id("action_id_11")).click();
-		case "REQUEST SUBMITTED": 			Thread.sleep(2500);
-											if (Workflow.equals("Workflow1")){
-												driver.findElement(By.id("action_id_51")).click();
-											}
-											if (Workflow.equals("Workflow2")){
-												driver.findElement(By.id("action_id_71")).click();
-												return;
-											}
-		case "BOOKED":			 			Thread.sleep(2500);
-											driver.findElement(By.id("action_id_61")).click();											
-											break;
-		}
-
-	}
-  
-  public static void VendorManagement() throws Exception{
-	  Thread.sleep(3000);
-		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-		if (!Assignee.equals("TEST USER: XLAS Full Access")){
-			driver.findElement(By.id("assign-to-me")).click();
-			Thread.sleep(4000);
-		}
-		Thread.sleep(3000);
-	  		Status = driver.findElement(By.id("status-val")).getText();	  		  		
-			switch (Status){
-			case "VENDOR SOURCING":			Thread.sleep(3000);
-											driver.findElement(By.id("action_id_51")).click();
-			case "PO REQUEST SUBMITTED":	Thread.sleep(3000);
-											driver.findElement(By.id("action_id_111")).click();								
-			case "PENDING CONFIRMATION":	Thread.sleep(3000);
-											driver.findElement(By.id("action_id_121")).click();
-			case "CONFIRMED":				Thread.sleep(3000);
-											driver.findElement(By.id("action_id_61")).click();
-											break;
 			}
 
-	}
-  
-  public static void SessionOverviewFormW() throws Exception{
-	  Thread.sleep(3000);
-		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-		if (!Assignee.equals("TEST USER: XLAS Full Access")){
-			driver.findElement(By.id("assign-to-me")).click();
-			Thread.sleep(4000);
-		}
-		driver.findElement(By.id("action_id_61")).click();
-		driver.findElement(By.id("customfield_12531-10")).click();
-		driver.findElement(By.id(CancelBoxButton)).click();										
-		Thread.sleep(3500);
-		driver.findElement(By.id("action_id_71")).click();		
-		Thread.sleep(4000);
-	  		Status = driver.findElement(By.id("status-val")).getText();	  		  		
-			switch (Status){
-			case "DATA ENTRY":						Thread.sleep(3000);
-													if (Workflow.equals("XeroxOver")){
-														driver.findElement(By.id("action_id_11")).click();
-													}
-													if (Workflow.equals("AGOver")){
-														driver.findElement(By.id("action_id_41")).click();
-														return;
-													}
-			case "PENDING ON-SITE CHECKS":			Thread.sleep(2000);
-													driver.findElement(By.id("action_id_21")).click();
-			case "ON-SITE CHECKS IN PROGRESS":		Thread.sleep(3000);			
-													if (driver.getPageSource().contains("Check 1: Room")){
-														driver.findElement(By.id("action_id_81")).click();
-														Thread.sleep(2000);
-													}
-													if (driver.getPageSource().contains("Check 2: Materials")){
-														driver.findElement(By.id("action_id_91")).click();
-														Thread.sleep(2000);
-													}
-													if (driver.getPageSource().contains("Check 3: IT")){	
-														driver.findElement(By.id("action_id_101")).click();
-														Thread.sleep(2000);
-													}
-													if (driver.getPageSource().contains("Check 4: Catering")){
-														driver.findElement(By.id("action_id_111")).click();
-														Thread.sleep(2000);
-													}
-													if (driver.getPageSource().contains("Check 5: Site Access")){
-														driver.findElement(By.id("action_id_121")).click();
-														Thread.sleep(2000);
-													}	
-													driver.findElement(By.id("action_id_31")).click();
-													Thread.sleep(2000);
-													break;	
-			}
-
-	}
+	
   
 }
