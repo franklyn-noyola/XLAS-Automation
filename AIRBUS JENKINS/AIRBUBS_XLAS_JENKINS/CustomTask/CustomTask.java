@@ -1,4 +1,4 @@
-package CustomTask;
+package AIRBUBS_XLAS_JENKINS.CustomTask;
 
 
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class CustomTask extends CourseCatalog.CourseCatalogTemplate{
+public class CustomTask extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate{
 
 @Test
  public void CustomTaskCreation() throws Exception  {

@@ -1,9 +1,9 @@
-package CourseModificationRequest;
+package AIRBUBS_XLAS_JENKINS.CourseModificationRequest;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
-public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatalogTemplate{
+public class CourseModificationRequestTemplate extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate{
 		
 		public static String ValidationData = "NoValidation";
 		public static String StatR;

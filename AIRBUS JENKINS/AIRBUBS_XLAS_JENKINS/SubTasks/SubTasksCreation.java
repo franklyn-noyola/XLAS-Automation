@@ -1,11 +1,11 @@
-package SubTasks;
+package AIRBUBS_XLAS_JENKINS.SubTasks;
 
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
-public class SubTasksCreation extends SessionCatalog.SessionCatalogTemplate{
+public class SubTasksCreation extends AIRBUBS_XLAS_JENKINS.SessionCatalog.SessionCatalogTemplate{
 	public static String TimeHappening = "customfield_10118";
 	public static String Comments = "customfield_10113";
 	public static String Subpath = "issuetype-field";
@@ -15,7 +15,7 @@ public class SubTasksCreation extends SessionCatalog.SessionCatalogTemplate{
 @Test
 public void SubtasksCreationExecution() throws Exception{
 			SessionChoice = "SubTaskCreation";
-			SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
+			AIRBUBS_XLAS_JENKINS.SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
 			Thread.sleep(1000);
 			SubtasksCreation();
 }

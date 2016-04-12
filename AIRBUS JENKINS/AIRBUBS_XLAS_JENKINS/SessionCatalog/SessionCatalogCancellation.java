@@ -1,4 +1,4 @@
-package SessionCatalog;
+package AIRBUBS_XLAS_JENKINS.SessionCatalog;
 
 
 
@@ -14,7 +14,7 @@ public class SessionCatalogCancellation extends SessionCatalogTemplate {
 				SessionChoice = "Cancellation";
 				TaskRequest = "Session";
 				Thread.sleep(1000);								
-				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();				
+				AIRBUBS_XLAS_JENKINS.CourseCatalog.StandardCourseCatalogCreation.CourseStandard();				
 				Thread.sleep(3000);		  						  					  		
 		    	SessionCatalogExecution();	    	
 		    	Thread.sleep(4000);

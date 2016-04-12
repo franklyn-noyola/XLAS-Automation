@@ -1,9 +1,5 @@
 package AIRBUBS_XLAS_JENKINS.CourseCatalog;
 
-
-
-
-
 import org.junit.Test;
 
 import static org.junit.Assert.fail;

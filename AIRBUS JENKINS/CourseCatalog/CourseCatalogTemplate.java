@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CourseCatalogTemplate {
 		public static WebDriver driver =  new FirefoxDriver();
+		public static String TaskRequest="NoChoice";
 		public static String EndD1 = "31/Dec/2017";
 		public static String Project;
 		public String Main_Task = "COURSE CATALOG";
@@ -84,7 +85,7 @@ public static void Login() throws Exception{
 
 	public static void GeneralTab() throws Exception{
 		Thread.sleep(1000);
-		driver.findElement(By.id("summary")).sendKeys("Course Catalog created via Automation Script");
+		driver.findElement(By.id("summary")).sendKeys("Course created via Automation Script");
 		new Select (driver.findElement(By.id("customfield_10164"))).selectByVisibleText("E_ENGINEERING"); //Training Domain
 		new Select (driver.findElement(By.id("customfield_10164:1"))).selectByValue("10164");//Training Subdomain
 		new Select (driver.findElement(By.id("customfield_10859"))).selectByValue("11501");//ABR
@@ -128,15 +129,15 @@ public static void Login() throws Exception{
 		driver.findElement(By.cssSelector("span.ui-icon.ui-icon-plus")).click();	
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AI (Airbus)");
-		Thread.sleep(800);
+		Thread.sleep(1000);
 		new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Spain");
 		driver.findElement(By.id("CostCenter")).sendKeys("1245788");
 		driver.findElement(By.id("ControllingArea")).sendKeys("65874545");
 		driver.findElement(By.id(SubmitGrid)).click();
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 		driver.findElement(By.id(CancelGrid)).click();		
 		//End Cost Center Grid
-		Thread.sleep(1500);
+		Thread.sleep(3000);
 		new Select (driver.findElement(By.id("customfield_10131"))).selectByVisibleText("Yes"); //Business Critical
 		driver.findElement(By.id("customfield_10877")).sendKeys("Further Comments"); //Further Comments			
 		
@@ -156,16 +157,16 @@ public static void Login() throws Exception{
 		}
 		
 		public static void AccessibilityTab() throws Exception{
-			Thread.sleep(400);		
+			Thread.sleep(1000);		
 			driver.findElement(By.xpath("//a[@href='#tab7']")).click();
 			Thread.sleep(2000);
 			//Accessibility Grid starts
 			driver.findElement(By.cssSelector("#add_customfield_10087_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AH (Airbus Helicopters)");	
 			Thread.sleep(1000);
 			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Finland");
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			driver.findElement(By.id("OrgUnit")).sendKeys("121212");
 			driver.findElement(By.id("PersonalArea")).sendKeys("1212212");
 			driver.findElement(By.id("PersonalSubarea")).sendKeys("121212");
@@ -173,10 +174,10 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("WorkingTimeException"))).selectByVisibleText("86 %");
 			new Select(driver.findElement(By.id("InternalExternal"))).selectByVisibleText("Internal");
 			driver.findElement(By.id(SubmitGrid)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Accessibility Grid ends
-			Thread.sleep(1000);
+			Thread.sleep(4000);
 			new Select(driver.findElement(By.id("customfield_10883"))).selectByVisibleText("Yes");//Accessiblity Offshore
 			new Select(driver.findElement(By.id("customfield_10866"))).selectByVisibleText("No");//Visible in HR
 			new Select(driver.findElement(By.id("customfield_10867"))).selectByVisibleText("Yes");//Visible External
@@ -198,15 +199,17 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AD&S - (Airbus Defense & Space)");
 			Thread.sleep(1000);
 			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("France");
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			driver.findElement(By.id("SapId")).sendKeys("6543223");
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 			driver.findElement(By.id("Email")).sendKeys("franklyn.noyola@gmail.com");
 			driver.findElement(By.id("Phone")).sendKeys("98665632332");
+			Thread.sleep(1000);
 			driver.findElement(By.id(SubmitGrid)).click();
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Training Provider Grid Ends
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id("customfield_10873")).sendKeys("Training Provider additional comment"); //Training Provider additional comment
 			//Trainer (Internal and External) grid starts
 			driver.findElement(By.cssSelector("#add_customfield_10985_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
@@ -219,11 +222,12 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 			driver.findElement(By.id("Email")).sendKeys("franklyn.noyola@xerox.com");
 			driver.findElement(By.id(SubmitGrid)).click();
+			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Trainer (Internal and External) grid ends
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.findElement(By.id("customfield_10874")).sendKeys("Trainer additional comment"); //Trainer additional comment
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		}
 
 		public static void DeliveryDataTab() throws Exception{
@@ -480,8 +484,7 @@ public static void Login() throws Exception{
 
 
 	public static void CourseExecution() throws Exception{
-				
-				Thread.sleep(5000);				
+				Thread.sleep(7000);				
 				UrgentConfirmation = driver.findElement(By.id("customfield_11500-val")).getText();
 				Thread.sleep(2000);
 				Classroom = driver.findElement(By.id("customfield_10832-val")).getText();
@@ -489,7 +492,7 @@ public static void Login() throws Exception{
 		  		DateValidation = driver.findElement(By.id("customfield_10004-val")).getText();
 		  		DateValidation = DateValidation.substring(6, 10);
 		  		DataValidation = Integer.parseInt(DateValidation);
-		  		Thread.sleep(4000);
+		  		Thread.sleep(4000);		  		
 				if (!UrgentConfirmation.equals("Yes")){
 					if (DataValidation > 2016 && Classroom.equals("Classroom training")){
 						driver.findElement(By.id("action_id_261")).click(); //Send to Pending Validation 
@@ -504,44 +507,46 @@ public static void Login() throws Exception{
 						Thread.sleep(3000);			
 					}else{
 						driver.findElement(By.id("action_id_11")).click(); //Send to next status - PENDING QUALITY CHECK.
-						Thread.sleep(4000);
-						
+						Thread.sleep(9000);
 					}		
-				Thread.sleep(3000);
-				Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
+					//Thread.sleep(3000);
+				/*Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
 				if (!Assignee.equals("TEST USER: XLAS Full Access")){
 					driver.findElement(By.id("assign-to-me")).click();
 					Thread.sleep(4000);
-				}	
-				Thread.sleep(1000);
+				}*/	
+				Thread.sleep(5000);
 				Stat = driver.findElement(By.id("status-val")).getText();				
-				Thread.sleep(3000);
+				Thread.sleep(5000);				
 				Random rand = new Random();				
 				switch(Stat){																								
-				case "PENDING QUALITY CHECK":						Thread.sleep(4000);
-																	driver.findElement(By.id("action_id_21")).click();
-				case "QUALITY CHECK IN PROGRESS":					Thread.sleep(4000);
-																	driver.findElement(By.id("action_id_31")).click();
-				case "WAITING FOR LMS ENTRY":						Thread.sleep(4000);
-																	driver.findElement(By.id("action_id_41")).click();												
-				case "LMS ENTRY IN PROGRESS":						Thread.sleep(4000);
-																	DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
+				case "PENDING QUALITY CHECK":						Thread.sleep(5000);
+																	driver.findElement(By.id("assign-to-me")).click();
 																	Thread.sleep(5000);
+																	driver.findElement(By.id("action_id_21")).click();
+				case "QUALITY CHECK IN PROGRESS":					Thread.sleep(5000);
+																	driver.findElement(By.id("action_id_31")).click();
+				case "WAITING FOR LMS ENTRY":						Thread.sleep(5000);
+																	driver.findElement(By.id("action_id_41")).click();												
+				case "LMS ENTRY IN PROGRESS":						Thread.sleep(5000);
+																	DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
+																	Thread.sleep(4000);
 																	int SAP = rand.nextInt(60000000)+1;
 																	SAPID = Integer.toString(SAP);
+																	Thread.sleep(5000);
 																	if(DeliveryConfirmation.equals("Yes")){
 																		driver.findElement(By.id("action_id_291")).click();
-																		Thread.sleep(1000);
+																		Thread.sleep(3000);
 																	}else{
 																		driver.findElement(By.id("action_id_91")).click();
-																		Thread.sleep(1000);																		
+																		Thread.sleep(3000);																		
 																	}
-																	Thread.sleep(4000);
+																	Thread.sleep(5000);
 																	driver.findElement(By.id("customfield_10194")).sendKeys(SAPID);																	
 																	driver.findElement(By.id("issue-workflow-transition-submit")).click();
-																	Thread.sleep (9000);
+																	Thread.sleep (10000);
 																	String Title = driver.getTitle();
-																	Thread.sleep (4000);																			
+																	Thread.sleep (6000);																	
 																	if (!Title.contains("LMS Entry Success")){
 																		return;
 																	}
@@ -562,26 +567,26 @@ public static void Login() throws Exception{
 																}
 				}
 		}else{
-			Thread.sleep(4000);
-			driver.findElement(By.id("action_id_351")).click();			
-			Thread.sleep(6000);
+			Thread.sleep(3000);
 			DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
-			Thread.sleep(4000);
 			Random rand = new Random();
 			int SAP = rand.nextInt(60000000)+1;
 			SAPID = Integer.toString(SAP);
+			Thread.sleep(2000);
+			driver.findElement(By.id("action_id_351")).click();															
+			Thread.sleep(9000);
 			if(DeliveryConfirmation.equals("Yes")){
 				driver.findElement(By.id("action_id_361")).click();
 			}
 			if(DeliveryConfirmation.equals("No")){
 				driver.findElement(By.id("action_id_371")).click();
 			}
-			Thread.sleep(4000);
+			Thread.sleep(5000);
 			driver.findElement(By.id("customfield_10194")).sendKeys(SAPID);																	
 			driver.findElement(By.id("issue-workflow-transition-submit")).click();
-			Thread.sleep (9000);
+			Thread.sleep (10000);
 			String Title = driver.getTitle();
-			Thread.sleep (2000);																			
+			Thread.sleep (6000);																			
 			if (!Title.contains("LMS Entry Success")){
 				return;
 			}
@@ -601,8 +606,8 @@ public static void Login() throws Exception{
 			}
 		}
 	}
-	
+		  	}
 	}	
-}
+
 
 

@@ -12,8 +12,13 @@ import org.openqa.selenium.*;
 public class StandardCourseCatalogCreation extends CourseCatalogTemplate{
 
 @Test
- public void CourseStandard() throws Exception  {
-					MainTask = "Course Catalog";
+public void CourseStandardExecution () throws Exception  {
+		MainTask = "Course Catalog";
+		TaskRequest = "Course";
+		CourseStandard();
+}
+ public static void CourseStandard() throws Exception  {
+	 				Thread.sleep(2000);
 					Login();
 					Thread.sleep(2000);				  					  		
 			  		GeneralTab();
@@ -47,9 +52,13 @@ public class StandardCourseCatalogCreation extends CourseCatalogTemplate{
 			    	Thread.sleep(1500);
 			    	CourseExecution();
 			    	Thread.sleep(1500);
-			    	System.out.println(RequesTask + " Course Catalog has been created and sent to Active");
-			    	driver.quit();			  					  		
-		  }
+			    		if (TaskRequest.equals("Session")){
+			    				return;
+		    		}
+		    				Thread.sleep(1500);
+		    				System.out.println(RequesTask + " Course Catalog has been created and sent to Active");
+		    				driver.quit();
+		    		  }
 	
 		
 }

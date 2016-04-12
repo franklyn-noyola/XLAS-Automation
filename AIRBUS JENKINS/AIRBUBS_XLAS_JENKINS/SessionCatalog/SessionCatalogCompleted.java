@@ -1,4 +1,4 @@
-package SessionCatalog;
+package AIRBUBS_XLAS_JENKINS.SessionCatalog;
 
 
 
@@ -18,7 +18,7 @@ public class SessionCatalogCompleted extends SessionCatalogTemplate {
 				MainTask = "Course Catalog";
 				TaskRequest = "Session";
 				Thread.sleep(1000);				
-				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();				
+				AIRBUBS_XLAS_JENKINS.CourseCatalog.StandardCourseCatalogCreation.CourseStandard();				
 				Thread.sleep(2000);		  						  					  		
 		    	SessionCatalogExecution();
 		    	if (SessionChoice.equals("SubTaskCreation") || SessionChoice.equals("SubtaskWorkflow") || SessionChoice.equals("SMR")){
