@@ -1,4 +1,4 @@
-package AIRBUBS_XLAS_JENKINS.CourseCatalog;
+package CourseCatalog;
 
 import org.junit.Test;
 

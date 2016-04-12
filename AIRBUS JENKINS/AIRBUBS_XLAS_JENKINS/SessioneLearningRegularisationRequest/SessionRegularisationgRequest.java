@@ -1,4 +1,4 @@
-package AIRBUBS_XLAS_JENKINS.SessioneLearningRegularisationRequest;
+package SessioneLearningRegularisationRequest;
 
 
 
@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 
 
-public class SessionRegularisationgRequest extends AIRBUBS_XLAS_JENKINS.CourseCatalog.CourseCatalogTemplate{
+public class SessionRegularisationgRequest extends CourseCatalog.CourseCatalogTemplate{
 
 @Test
  public void SessioneRegularisationCreation() throws Exception  {

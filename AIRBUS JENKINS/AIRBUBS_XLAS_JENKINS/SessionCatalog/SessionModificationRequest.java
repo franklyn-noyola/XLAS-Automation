@@ -1,4 +1,4 @@
-package AIRBUBS_XLAS_JENKINS.SessionCatalog;
+package SessionCatalog;
 
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -13,7 +13,7 @@ public void SessionModificationRequestCreation() throws Exception{
 		MainTask = "Course Catalog";
 		TaskRequest = "Session";
 		SessionChoice = "SMR";
-		AIRBUBS_XLAS_JENKINS.CourseCatalog.StandardCourseCatalogCreation.CourseStandard();	    	
+		CourseCatalog.StandardCourseCatalogCreation.CourseStandard();	    	
     	SessionCatalogExecution();	
     	Thread.sleep(1000);
     	SessionModificationRequestExecution();
