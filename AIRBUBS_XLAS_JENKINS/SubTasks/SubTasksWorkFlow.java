@@ -1,16 +1,16 @@
-package AIRBUBS_XLAS_JENKINS.SubTasks;
+package SubTasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class SubTasksWorkFlow extends AIRBUBS_XLAS_JENKINS.SessionCatalog.SessionCatalogTemplate{
+public class SubTasksWorkFlow extends SessionCatalog.SessionCatalogTemplate{
 		
 @Test
 public void SubtasksWorkflowExecutionInit() throws Exception{
 		SessionChoice = "SubtaskWorkflow";
-		AIRBUBS_XLAS_JENKINS.SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
+		SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
 		Thread.sleep(1000);
-		AIRBUBS_XLAS_JENKINS.SubTasks.SubTasksCreation.SubtasksCreation();
+		SubTasksCreation.SubtasksCreation();
 		Thread.sleep(1000);
 		SubtasksWorkflowExecution();
 }
@@ -101,7 +101,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		Thread.sleep(3000);
 	driver.findElement(By.id("parent_issue_summary")).click();
 		Thread.sleep(3000);	
-	AIRBUBS_XLAS_JENKINS.SessionCatalog.SessionCatalogTemplate.SessionWCompleted();
+	SessionCatalog.SessionCatalogTemplate.SessionWCompleted();
 	Thread.sleep(2000);
 	System.out.println(SessionId+" sent to Complete with all Subtasks created");
 	driver.quit();
