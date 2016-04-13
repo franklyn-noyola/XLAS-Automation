@@ -517,9 +517,9 @@ public static void Login() throws Exception{
 					driver.findElement(By.id("assign-to-me")).click();
 					Thread.sleep(4000);
 				}*/	
-				Thread.sleep(3000);
+				Thread.sleep(6000);
 				Stat = driver.findElement(By.id("status-val")).getText();				
-				Thread.sleep(3000);				
+				Thread.sleep(4000);				
 				Random rand = new Random();				
 				switch(Stat){																								
 				case "PENDING QUALITY CHECK":						Thread.sleep(4000);
