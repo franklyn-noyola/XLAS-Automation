@@ -9,9 +9,9 @@ public class SubTasksWorkFlow extends SessionCatalog.SessionCatalogTemplate{
 public void SubtasksWorkflowExecutionInit() throws Exception{
 		SessionChoice = "SubtaskWorkflow";
 		SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		SubTasksCreation.SubtasksCreation();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		SubtasksWorkflowExecution();
 }
 
@@ -143,6 +143,8 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 		Thread.sleep(3000);
 	  		Status = driver.findElement(By.id("status-val")).getText();	  		  		
 			switch (Status){
+			case "OPEN / UPDATE":			driver.findElement(By.id("action_id_11")).click();
+											Thread.sleep(3000);
 			case "VENDOR SOURCING":			Thread.sleep(3000);
 											driver.findElement(By.id("action_id_51")).click();
 			case "PO REQUEST SUBMITTED":	Thread.sleep(3000);
