@@ -116,12 +116,12 @@ public static void SessionFields() throws Exception{
 																	int SAP = rand.nextInt(60000000)+1;
 																	SAPID = Integer.toString(SAP);																	
 																	driver.findElement(By.id("action_id_91")).click();
-																	Thread.sleep(3000);																		
+																	Thread.sleep(8000);																		
 																	driver.findElement(By.id("customfield_10001")).sendKeys(SAPID);																	
 																	driver.findElement(By.id("issue-workflow-transition-submit")).click();
-																	Thread.sleep (9000);
+																	Thread.sleep (11000);
 																	String Title = driver.getTitle();
-																	Thread.sleep (3000);																			
+																	Thread.sleep (4000);																			
 																	if (!Title.contains("LMS Entry Success")){
 																		if (SessionChoice.equals("Completed")){
 																			SessionWCompleted();
