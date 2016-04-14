@@ -48,6 +48,7 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 						Thread.sleep(3000);												
 					}
 					if (!ValidationData.equals("ValidationOnly")){
+						Thread.sleep(500);
 						RequesTask = driver.findElement(By.id("key-val")).getText();
 						Thread.sleep(1000);
 						driver.findElement(By.id("action_id_11")).click();
