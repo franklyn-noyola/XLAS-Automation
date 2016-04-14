@@ -56,9 +56,12 @@ public static void DeliveryData() throws Exception  {
 				RequesTask = driver.findElement(By.id("key-val")).getText();
 		    	Thread.sleep(1500);
 		    	CourseExecution();
-				System.out.println(RequesTask + " Course Catalog has been created and sent to Pending Delivery Data");
-			    driver.quit();
-			    			  					  		
+		    	if (CRM.equals("Course Modification Request")){
+		    			return;
+		    	}else{
+		    		System.out.println(RequesTask + " Course Catalog has been created and sent to Pending Delivery Data");
+		    		driver.quit();
+		    	}			  					  		
 		  }
 	
 			
