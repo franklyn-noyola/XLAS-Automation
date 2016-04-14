@@ -16,8 +16,11 @@ public class DeliveryDataCourseCatalog extends CourseCatalogTemplate{
 	
 
 @Test
-public void DeliveryData() throws Exception  {
-			MainTask = "Course Catalog";
+public void DeliveryDataInit() throws Exception  {
+		MainTask = "Course Catalog";
+		DeliveryData();
+}
+public static void DeliveryData() throws Exception  {
 			Login();			  					  		
 			GeneralTab();
 			Thread.sleep(2000);
