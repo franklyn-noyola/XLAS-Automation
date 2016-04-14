@@ -234,7 +234,12 @@ public static void Login() throws Exception{
 
 		public static void DeliveryDataTab() throws Exception{
 			Thread.sleep(100);
-			driver.findElement(By.xpath("//a[@href='#tab9']")).click();
+			if (ValidationData.equals("DeliveryData")){
+				driver.findElement(By.xpath("//a[@href='#tab-8']")).click();
+			}else{
+				driver.findElement(By.xpath("//a[@href='#tab9']")).click();	
+			}
+			
 			new Select(driver.findElement(By.id("customfield_10958"))).selectByVisibleText("Yes"); //Any training course material delivered?
 			driver.findElement(By.id("customfield_10960")).sendKeys("Who is responsible for content and storage of the course material?"); //Who is responsible for content and storage of the course material?
 			new Select(driver.findElement(By.id("customfield_10959"))).selectByVisibleText("Xerox prints and send material"); //Who delivers the course material?
