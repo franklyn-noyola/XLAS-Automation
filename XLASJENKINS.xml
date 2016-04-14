@@ -6,6 +6,7 @@
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="AIRBUS JENKINS">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../Users/C9854448/Desktop/eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
@@ -45,7 +46,6 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="AIRBUBS_XLAS_JENKINS">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -76,5 +76,85 @@
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
+    </target>
+    <target name="CustomTask">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CustomTask.CustomTask" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="DeliveryDataCourseCatalog">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseCatalog.DeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SessioneeLearninRequest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SessioneLearningRegularisationRequest.SessioneeLearninRequest" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SessionRegularisationgRequest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SessioneLearningRegularisationRequest.SessionRegularisationgRequest" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="StandardCourseCatalogCreation">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseCatalog.StandardCourseCatalogCreation" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SubTasksCreation">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SubTasks.SubTasksCreation" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SubTasksWorkFlow">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SubTasks.SubTasksWorkFlow" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SubTasksWorkFlowCancelled">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SubTasks.SubTasksWorkFlowCancelled" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="UrgentCourseCatalog">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseCatalog.UrgentCourseCatalog" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
     </target>
 </project>
