@@ -15,9 +15,7 @@ public class StandardCourseModificationRequest extends CourseModificationRequest
 	public  void CourseModificationRequest() throws Exception{
 				MainTask = "Course Catalog";
 				CRM = "Course Modification Request";				
-				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();									
-		    	Thread.sleep(3000);
-		    	CourseCatalog.CourseCatalogTemplate.CourseExecution();
+				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();											    	
 		    	Thread.sleep(3000);		    	
 		    	CourseModificationRequestExecution();
 		    	Thread.sleep(1500);
