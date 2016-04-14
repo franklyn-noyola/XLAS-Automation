@@ -22,6 +22,7 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 					driver.findElement(By.cssSelector("span.trigger-label")).click();
 			    	Thread.sleep(1000);
 			    	CourseCatalog.CourseCatalogTemplate.DeliveryDataTab();
+			    	Thread.sleep(1000);
 			    	driver.findElement(By.id("edit-issue-submit")).click();
 					Thread.sleep(3000);
 				}
