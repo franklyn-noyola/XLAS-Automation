@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatalogTemplate{
 		
-		public static String ValidationData = "NoValidation";
+		
 		public static String StatR;
 		
 	public static void CourseModificationRequestExecution() throws Exception{
@@ -18,6 +18,13 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 				Thread.sleep(1000);
 				driver.findElement(By.id("submit")).click();
 				Thread.sleep(3000);
+				if (ValidationData.equals("DeliveryData")){
+					driver.findElement(By.cssSelector("span.trigger-label")).click();
+			    	Thread.sleep(1000);
+			    	CourseCatalog.CourseCatalogTemplate.DeliveryDataTab();
+			    	driver.findElement(By.id("edit-issue-submit")).click();
+					Thread.sleep(3000);
+				}
 					if (ValidationData.equals("ValidationOnly")){
 					   	driver.findElement(By.cssSelector("span.trigger-label")).click();
 				    	Thread.sleep(1000);
@@ -38,10 +45,14 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 						}						
 						driver.findElement(By.id("action_id_221")).click();
 						Thread.sleep(3000);												
-					}else{
+					}
+					if (!ValidationData.equals("ValidationOnly")){
+						RequesTask = driver.findElement(By.id("key-val")).getText();
+						Thread.sleep(1000);
 						driver.findElement(By.id("action_id_11")).click();
 						Thread.sleep(4000);
 					}
+					
 					Thread.sleep(4000);
 					StatR = driver.findElement(By.id("status-val")).getText();
 					
