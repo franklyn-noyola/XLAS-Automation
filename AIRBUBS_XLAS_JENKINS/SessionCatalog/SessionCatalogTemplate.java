@@ -176,7 +176,7 @@ public static void SessionFields() throws Exception{
 				switch (StatR){
 				case "ACTIVE":												Thread.sleep(2000);
 																				Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-																					if (!Assignee.equals("TEST USER: XLAS Full Access")){
+																					if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 																						driver.findElement(By.id("assign-to-me")).click();
 																						Thread.sleep(4000);
 																					}		
@@ -199,7 +199,7 @@ public static void SessionFields() throws Exception{
 		switch (StatR){
 		case "ACTIVE":												Thread.sleep(2000);
 																		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-																			if (!Assignee.equals("TEST USER: XLAS Full Access")){
+																			if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 																				driver.findElement(By.id("assign-to-me")).click();
 																				Thread.sleep(4000);
 																			}		

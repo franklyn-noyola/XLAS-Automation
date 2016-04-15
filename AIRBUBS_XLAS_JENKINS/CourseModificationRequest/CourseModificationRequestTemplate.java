@@ -18,15 +18,20 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 				Thread.sleep(1000);
 				driver.findElement(By.id("submit")).click();
 				Thread.sleep(3000);
-				if (ValidationData.equals("DeliveryData")){
+				if (ValidationData.equals("DeliveryData") || !ValidationData.equals("ValidationOnly")){
 					driver.findElement(By.cssSelector("span.trigger-label")).click();
 			    	Thread.sleep(2000);
 			    	driver.findElement(By.xpath("//a[@href='#tab-8']")).click();
 			    	Thread.sleep(1000);
 			    	CourseCatalog.CourseCatalogTemplate.DeliveryDataTab();
-			    	Thread.sleep(1000);
+			    	Thread.sleep(2000);
 			    	driver.findElement(By.id("edit-issue-submit")).click();
 					Thread.sleep(3000);
+					RequesTask = driver.findElement(By.id("key-val")).getText();
+					Thread.sleep(2000);
+					driver.findElement(By.id("action_id_11")).click();
+					Thread.sleep(4000);
+					
 				}
 					if (ValidationData.equals("ValidationOnly")){
 					   	driver.findElement(By.cssSelector("span.trigger-label")).click();
@@ -42,20 +47,13 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 						driver.findElement(By.id("action_id_201")).click();
 						Thread.sleep(4000);						
 						Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-						if (!Assignee.equals("TEST USER: XLAS Full Access")){
+						if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 							driver.findElement(By.id("assign-to-me")).click();
 							Thread.sleep(4000);
 						}						
 						driver.findElement(By.id("action_id_221")).click();
 						Thread.sleep(3000);												
-					}
-					if (!ValidationData.equals("ValidationOnly")){
-						Thread.sleep(500);
-						RequesTask = driver.findElement(By.id("key-val")).getText();
-						Thread.sleep(1000);
-						driver.findElement(By.id("action_id_11")).click();
-						Thread.sleep(4000);
-					}
+					}				
 					
 					Thread.sleep(4000);
 					StatR = driver.findElement(By.id("status-val")).getText();
@@ -63,7 +61,7 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 				switch(StatR){													
 				case "PENDING QUALITY CHECK":						Thread.sleep(3000);
 																			Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-																			if (!Assignee.equals("TEST USER: XLAS Full Access")){
+																			if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 																				driver.findElement(By.id("assign-to-me")).click();
 																				Thread.sleep(4000);
 																			}						
