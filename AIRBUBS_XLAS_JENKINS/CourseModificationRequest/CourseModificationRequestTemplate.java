@@ -20,6 +20,8 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 				Thread.sleep(3000);
 				if (ValidationData.equals("DeliveryData")){
 					driver.findElement(By.cssSelector("span.trigger-label")).click();
+			    	Thread.sleep(2000);
+			    	driver.findElement(By.xpath("//a[@href='#tab-8']")).click();
 			    	Thread.sleep(1000);
 			    	CourseCatalog.CourseCatalogTemplate.DeliveryDataTab();
 			    	Thread.sleep(1000);
