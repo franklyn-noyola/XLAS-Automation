@@ -110,7 +110,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
   public static void SubTaskWorkflow() throws Exception{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-		if (!Assignee.equals("TEST USER: XLAS Full Access")){
+		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 			driver.findElement(By.id("assign-to-me")).click();
 			Thread.sleep(4000);
 		}
@@ -136,7 +136,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
   public static void VendorManagement() throws Exception{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-		if (!Assignee.equals("TEST USER: XLAS Full Access")){
+		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 			driver.findElement(By.id("assign-to-me")).click();
 			Thread.sleep(4000);
 		}
@@ -161,7 +161,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
   public static void SessionOverviewFormW() throws Exception{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-		if (!Assignee.equals("TEST USER: XLAS Full Access")){
+		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 			driver.findElement(By.id("assign-to-me")).click();
 			Thread.sleep(4000);
 		}
