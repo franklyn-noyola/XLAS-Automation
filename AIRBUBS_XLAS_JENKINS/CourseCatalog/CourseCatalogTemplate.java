@@ -166,9 +166,9 @@ public static void Login() throws Exception{
 			driver.findElement(By.cssSelector("#add_customfield_10087_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
 			Thread.sleep(2000);
 			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AH (Airbus Helicopters)");	
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Finland");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			driver.findElement(By.id("OrgUnit")).sendKeys("121212");
 			driver.findElement(By.id("PersonalArea")).sendKeys("1212212");
 			driver.findElement(By.id("PersonalSubarea")).sendKeys("121212");
@@ -176,7 +176,7 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("WorkingTimeException"))).selectByVisibleText("86 %");
 			new Select(driver.findElement(By.id("InternalExternal"))).selectByVisibleText("Internal");
 			driver.findElement(By.id(SubmitGrid)).click();
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 			driver.findElement(By.id(CancelGrid)).click();
 			//Accessibility Grid ends
 			Thread.sleep(3000);
