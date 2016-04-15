@@ -517,12 +517,7 @@ public static void Login() throws Exception{
 						driver.findElement(By.id("action_id_11")).click(); //Send to next status - PENDING QUALITY CHECK.
 						Thread.sleep(4000);
 					}		
-					//Thread.sleep(3000);
-				/*Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-				if (!Assignee.equals("TEST USER: XLAS Full Access")){
-					driver.findElement(By.id("assign-to-me")).click();
-					Thread.sleep(4000);
-				}*/	
+	
 				Thread.sleep(6000);
 				Stat = driver.findElement(By.id("status-val")).getText();				
 				Thread.sleep(4000);				
@@ -579,20 +574,22 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("action_id_351")).click();			
 			Thread.sleep(6000);
 			DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
-			Thread.sleep(4000);
+			Thread.sleep(7000);
 			Random rand = new Random();
 			int SAP = rand.nextInt(60000000)+1;
 			SAPID = Integer.toString(SAP);
 			if(DeliveryConfirmation.equals("Yes")){
 				driver.findElement(By.id("action_id_361")).click();
+				Thread.sleep(4000);
 			}
 			if(DeliveryConfirmation.equals("No")){
 				driver.findElement(By.id("action_id_371")).click();
+				Thread.sleep(4000);
 			}
-			Thread.sleep(4000);
+			
 			driver.findElement(By.id("customfield_10194")).sendKeys(SAPID);																	
 			driver.findElement(By.id("issue-workflow-transition-submit")).click();
-			Thread.sleep (9000);
+			Thread.sleep (11000);
 			String Title = driver.getTitle();
 			Thread.sleep (2000);																			
 			if (!Title.contains("LMS Entry Success")){
