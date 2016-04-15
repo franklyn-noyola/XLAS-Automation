@@ -46,6 +46,7 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="AIRBUBS_XLAS_JENKINS">
+                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -77,6 +78,14 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <target name="CourseModificationRequestDeliveryData">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseModificationRequest.CourseModificationRequestDeliveryData" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
     <target name="CustomTask">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -93,11 +102,35 @@
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
+    <target name="SessionCatalogCancellation">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SessionCatalog.SessionCatalogCancellation" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SessionCatalogCompleted">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SessionCatalog.SessionCatalogCompleted" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
     <target name="SessioneeLearninRequest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="SessioneLearningRegularisationRequest.SessioneeLearninRequest" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="SessionModificationRequest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="SessionCatalog.SessionModificationRequest" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
@@ -114,6 +147,14 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="CourseCatalog.StandardCourseCatalogCreation" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="StandardCourseModificationRequest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseModificationRequest.StandardCourseModificationRequest" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
@@ -146,6 +187,30 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="CourseCatalog.UrgentCourseCatalog" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="UrgentDeliveryDataCourseCatalog">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseCatalog.UrgentDeliveryDataCourseCatalog" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="ValidationCourseModificationRequest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseModificationRequest.ValidationCourseModificationRequest" todir="${junit.output.dir}"/>
+            <classpath refid="AIRBUS JENKINS.classpath"/>
+        </junit>
+    </target>
+    <target name="ValidationCourseCatalog">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="CourseCatalog.ValidationCourseCatalog" todir="${junit.output.dir}"/>
             <classpath refid="AIRBUS JENKINS.classpath"/>
         </junit>
     </target>
