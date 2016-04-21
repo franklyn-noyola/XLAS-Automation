@@ -578,6 +578,7 @@ public static void Login() throws Exception{
 			Random rand = new Random();
 			int SAP = rand.nextInt(60000000)+1;
 			SAPID = Integer.toString(SAP);
+			Thread.sleep(1000);
 			if(DeliveryConfirmation.equals("Yes")){
 				driver.findElement(By.id("action_id_361")).click();
 				Thread.sleep(4000);
