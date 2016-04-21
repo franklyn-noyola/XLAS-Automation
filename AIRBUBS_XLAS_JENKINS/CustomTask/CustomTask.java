@@ -29,7 +29,7 @@ public class CustomTask extends CourseCatalog.CourseCatalogTemplate{
 					RequesTask = driver.findElement(By.id("key-val")).getText();
 					Thread.sleep(1000);
 					CustomTaskWorkflow();
-					System.out.println(RequesTask + " Course Catalog has been created and sent to Completed");
+					System.out.println(RequesTask + " Custom Task has been created and sent to Completed");
 			    	driver.quit();			  					  		
 		  }
 	
