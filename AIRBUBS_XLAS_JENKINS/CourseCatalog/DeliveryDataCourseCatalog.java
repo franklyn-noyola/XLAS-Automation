@@ -17,6 +17,7 @@ public class DeliveryDataCourseCatalog extends CourseCatalogTemplate{
 
 @Test
 public void DeliveryDataInit() throws Exception  {
+		CourseType = "DeliveryData";
 		MainTask = "Course Catalog";
 		DeliveryData();
 }
@@ -24,8 +25,7 @@ public static void DeliveryData() throws Exception  {
 			Login();			  					  		
 			GeneralTab();
 			Thread.sleep(2000);
-			new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
-			new Select(driver.findElement(By.id("customfield_11400"))).selectByVisibleText("Yes");
+			
 			UKTab();
 			SPTab();
 			FRTab();

@@ -7,6 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.fail;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class StandardCourseCatalogCreation extends CourseCatalogTemplate{
@@ -22,6 +23,11 @@ public void CourseStandardExecution () throws Exception  {
 					Login();
 					Thread.sleep(2000);				  					  		
 			  		GeneralTab();
+			  		if (CourseType.equals("DeliveryDataOnly")){
+			  				Thread.sleep(2000);
+			  				new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
+			  				new Select(driver.findElement(By.id("customfield_11400"))).selectByVisibleText("Yes");
+			  		}	
 			  		UKTab();
 			  		SPTab();
 			  		FRTab();
