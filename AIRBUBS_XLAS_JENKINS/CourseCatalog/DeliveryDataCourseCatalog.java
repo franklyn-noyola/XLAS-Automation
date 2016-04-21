@@ -19,7 +19,7 @@ public void DeliveryDataInit() throws Exception  {
 }
 public static void DeliveryData() throws Exception  {
 				StandardCourseCatalogCreation.CourseStandard();
-		    	Thread.sleep(1500);
+		    	Thread.sleep(2000);
 		    	CourseExecution();
 		    	if (CRM.equals("Course Modification Request")){
 		    			return;
