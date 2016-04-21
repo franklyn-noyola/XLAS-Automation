@@ -490,17 +490,19 @@ public static void Login() throws Exception{
 		}
 
 
-	public static void CourseExecution() throws Exception{
-				
+	public static void CourseExecution() throws Exception{				
 				Thread.sleep(5000);				
 				UrgentConfirmation = driver.findElement(By.id("customfield_11500-val")).getText();
+				DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
 				Thread.sleep(2000);
 				Classroom = driver.findElement(By.id("customfield_10832-val")).getText();
 				Thread.sleep(2000);
 		  		DateValidation = driver.findElement(By.id("customfield_10004-val")).getText();
 		  		DateValidation = DateValidation.substring(6, 10);
 		  		DataValidation = Integer.parseInt(DateValidation);
-		  		Thread.sleep(4000);		  		
+		  		Thread.sleep(4000);	
+		  		System.out.println(UrgentConfirmation);
+		  		System.out.println(DeliveryConfirmation);
 				if (!UrgentConfirmation.equals("Yes")){
 					if (DataValidation > 2016 && Classroom.equals("Classroom training")){
 						driver.findElement(By.id("action_id_261")).click(); //Send to Pending Validation 
@@ -531,9 +533,7 @@ public static void Login() throws Exception{
 																	driver.findElement(By.id("action_id_31")).click();
 				case "WAITING FOR LMS ENTRY":						Thread.sleep(4000);
 																	driver.findElement(By.id("action_id_41")).click();												
-				case "LMS ENTRY IN PROGRESS":						Thread.sleep(5000);
-																	DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
-																	Thread.sleep(1000);
+				case "LMS ENTRY IN PROGRESS":						Thread.sleep(1000);
 																	int SAP = rand.nextInt(60000000)+1;
 																	SAPID = Integer.toString(SAP);
 																	Thread.sleep(4000);
