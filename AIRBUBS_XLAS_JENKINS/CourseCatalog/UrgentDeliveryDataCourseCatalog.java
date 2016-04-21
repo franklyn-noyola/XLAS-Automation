@@ -50,7 +50,7 @@ public void UrgentDeliveryData() throws Exception  {
 				RequesTask = driver.findElement(By.id("key-val")).getText();
 		    	Thread.sleep(1500);
 		    	CourseExecution();
-				System.out.println(RequesTask + " Course Catalog has been created and sent to Pending Delivery Data");
+				System.out.println(RequesTask + " Urgent and Delivery Data Course Catalog has been created and sent to Pending Delivery Data");
 			    driver.quit();
 			    			  					  		
 		  }

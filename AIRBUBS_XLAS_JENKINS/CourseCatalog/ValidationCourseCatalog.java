@@ -47,7 +47,7 @@ public void ValidationCourse() throws Exception  {
 				RequesTask = driver.findElement(By.id("key-val")).getText();
 		    	Thread.sleep(1500);
 		    	CourseExecution();
-				System.out.println(RequesTask + " Course Catalog has been created and sent to Active");
+				System.out.println(RequesTask + " Validation Course Catalog has been created and sent to Active");
 			    driver.quit();
 			    			  					  		
 		  }

@@ -48,7 +48,7 @@ public void UrgentCourse() throws Exception  {
 				RequesTask = driver.findElement(By.id("key-val")).getText();
 		    	Thread.sleep(1500);
 		    	CourseExecution();
-				System.out.println(RequesTask + " Course Catalog has been created and sent to Active");
+				System.out.println(RequesTask + " Urgent Course Catalog has been created and sent to Active");
 			    driver.quit();
 			    			  					  		
 		  }

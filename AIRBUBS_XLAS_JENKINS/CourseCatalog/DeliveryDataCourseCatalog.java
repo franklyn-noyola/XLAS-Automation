@@ -59,7 +59,7 @@ public static void DeliveryData() throws Exception  {
 		    	if (CRM.equals("Course Modification Request")){
 		    			return;
 		    	}else{
-		    		System.out.println(RequesTask + " Course Catalog has been created and sent to Pending Delivery Data");
+		    		System.out.println(RequesTask + " Delivery Data Course Catalog has been created and sent to Pending Delivery Data");
 		    		driver.quit();
 		    	}			  					  		
 		  }
