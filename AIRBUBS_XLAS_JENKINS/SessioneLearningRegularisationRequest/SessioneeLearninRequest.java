@@ -29,7 +29,7 @@ public static void eLearningWorkflow() throws Exception{
 					Thread.sleep(1000);
 					  Stat = driver.findElement(By.id("status-val")).getText();
 					  Assignee = driver.findElement(By.id("assignee-val")).getText();
-						if (!Assignee.equals("TEST USER: XLAS Full Access")){
+						if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
 							driver.findElement(By.id("assign-to-me")).click();
 								Thread.sleep(5000);
 								}
