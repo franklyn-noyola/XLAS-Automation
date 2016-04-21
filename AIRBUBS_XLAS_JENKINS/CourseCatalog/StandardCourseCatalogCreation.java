@@ -58,7 +58,7 @@ public void CourseStandardExecution () throws Exception  {
 			    	Thread.sleep(1500);
 			    	CourseExecution();
 			    	Thread.sleep(1500);
-			    		if (TaskRequest.equals("Session") || CRM.equals("Course Modification Request")){
+			    		if (TaskRequest.equals("Session") || CRM.equals("Course Modification Request") || !CourseType.equals("StandardCourse")) {
 			    				return;
 		    		}
 		    				Thread.sleep(1500);
