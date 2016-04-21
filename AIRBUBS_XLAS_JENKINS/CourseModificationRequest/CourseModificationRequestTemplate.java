@@ -18,7 +18,7 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 				Thread.sleep(1000);
 				driver.findElement(By.id("submit")).click();
 				Thread.sleep(3000);
-				if (ValidationData.equals("DeliveryData") || !ValidationData.equals("ValidationOnly")){
+				if (ValidationData.equals("DeliveryData")){
 					driver.findElement(By.cssSelector("span.trigger-label")).click();
 			    	Thread.sleep(2000);
 			    	driver.findElement(By.xpath("//a[@href='#tab-8']")).click();
@@ -27,10 +27,6 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 			    	Thread.sleep(2000);
 			    	driver.findElement(By.id("edit-issue-submit")).click();
 					Thread.sleep(3000);
-					RequesTask = driver.findElement(By.id("key-val")).getText();
-					Thread.sleep(2000);
-					driver.findElement(By.id("action_id_11")).click();
-					Thread.sleep(4000);
 					
 				}
 					if (ValidationData.equals("ValidationOnly")){
@@ -54,7 +50,12 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 						driver.findElement(By.id("action_id_221")).click();
 						Thread.sleep(3000);												
 					}				
-					
+						if (!ValidationData.equals("ValidationOnly")){
+							RequesTask = driver.findElement(By.id("key-val")).getText();
+							Thread.sleep(2000);
+							driver.findElement(By.id("action_id_11")).click();
+							Thread.sleep(4000);
+					}
 					Thread.sleep(4000);
 					StatR = driver.findElement(By.id("status-val")).getText();
 					
