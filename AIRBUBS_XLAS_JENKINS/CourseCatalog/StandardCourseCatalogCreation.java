@@ -39,7 +39,11 @@ public void CourseStandardExecution () throws Exception  {
 			  		ScheduleTab();
 			  		AccessibilityTab();
 			  		ResourcesTab();
-			  		DeliveryDataTab();
+			  		if (CourseType.equals("DeliveryDataOnly")){
+			  			NonDeliveryDataTab();
+			  		}else{
+			  			DeliveryDataTab();
+			  		}	
 		  			Thread.sleep(2000);
 			  		driver.findElement(By.id(CreateButton)).click();
 			  		Thread.sleep(5000);
