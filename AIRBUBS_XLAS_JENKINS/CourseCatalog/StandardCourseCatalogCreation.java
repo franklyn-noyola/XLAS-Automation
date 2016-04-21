@@ -37,7 +37,13 @@ public void CourseStandardExecution () throws Exception  {
 		  				new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
 		  				new Select(driver.findElement(By.id("customfield_11400"))).selectByVisibleText("Yes");
 		  				new Select(driver.findElement(By.id("customfield_11500"))).selectByVisibleText("Yes");
-		  		}
+			  		}
+			  		if (CourseType.equals("Validation")){
+			  			Thread.sleep(1000);
+			  			driver.findElement(By.id("customfield_10004")).clear();
+			  			driver.findElement(By.id("customfield_10004")).sendKeys("31/Dec/2017");//Validity End Date
+			  			new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
+			  		}	
 			  		UKTab();
 			  		SPTab();
 			  		FRTab();
