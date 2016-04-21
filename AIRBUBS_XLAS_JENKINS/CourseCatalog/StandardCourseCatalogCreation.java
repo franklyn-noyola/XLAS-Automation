@@ -31,7 +31,13 @@ public void CourseStandardExecution () throws Exception  {
 			  		if (CourseType.equals("UrgentOnly")){
 			  			Thread.sleep(1000);
 			  			new Select(driver.findElement(By.id("customfield_11500"))).selectByVisibleText("Yes");
-			  		}	
+			  		}
+			  		if (CourseType.equals("UrgentAndDelivery")){
+		  				Thread.sleep(1000);
+		  				new Select (driver.findElement(By.id("customfield_10832"))).selectByVisibleText("Classroom training");
+		  				new Select(driver.findElement(By.id("customfield_11400"))).selectByVisibleText("Yes");
+		  				new Select(driver.findElement(By.id("customfield_11500"))).selectByVisibleText("Yes");
+		  		}
 			  		UKTab();
 			  		SPTab();
 			  		FRTab();
@@ -39,7 +45,7 @@ public void CourseStandardExecution () throws Exception  {
 			  		ScheduleTab();
 			  		AccessibilityTab();
 			  		ResourcesTab();
-			  		if (CourseType.equals("DeliveryDataOnly")){
+			  		if (CourseType.equals("DeliveryDataOnly") || CourseType.equals("UrgentAndDelivery")){
 			  			NonDeliveryDataTab();
 			  		}else{
 			  			DeliveryDataTab();
