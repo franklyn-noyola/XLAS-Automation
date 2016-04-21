@@ -6,10 +6,6 @@ package CourseCatalog;
 
 import org.junit.Test;
 
-import static org.junit.Assert.fail;
-
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.Select;
 
 
 public class DeliveryDataCourseCatalog extends CourseCatalogTemplate{
@@ -17,43 +13,12 @@ public class DeliveryDataCourseCatalog extends CourseCatalogTemplate{
 
 @Test
 public void DeliveryDataInit() throws Exception  {
-		CourseType = "DeliveryData";
+		CourseType = "DeliveryDataOnly";
 		MainTask = "Course Catalog";
 		DeliveryData();
 }
 public static void DeliveryData() throws Exception  {
-			Login();			  					  		
-			GeneralTab();
-			Thread.sleep(2000);
-			
-			UKTab();
-			SPTab();
-			FRTab();
-			GETab();
-			ScheduleTab();
-			AccessibilityTab();
-			ResourcesTab();
-			NonDeliveryDataTab();
-			Thread.sleep(2000);
-			driver.findElement(By.id(CreateButton)).click();
-						
-			Thread.sleep(5000);
-				if (driver.getPageSource().contains("The duplicate key value is")){			  				
-					System.out.println("Duplicate Key Has been detecteed. No Course created");
-					driver.quit();
-					fail("Duplicate Key Has been detecteed. No Course created");
-					return;
-			}
-				Thread.sleep(1000);			
-				driver.findElement(By.cssSelector("#action_id_181 > span.trigger-label")).click();
-				PricesInternationalTab();
-				PricesUKTab();
-				PricesFRTab();
-				PricesGETab();
-				PricesSPTab();
-				driver.findElement(By.id(CancelBoxButton)).click();
-				Thread.sleep(3000);				
-				RequesTask = driver.findElement(By.id("key-val")).getText();
+				StandardCourseCatalogCreation.CourseStandard();
 		    	Thread.sleep(1500);
 		    	CourseExecution();
 		    	if (CRM.equals("Course Modification Request")){
