@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CourseCatalogTemplate {
 		public static WebDriver driver =  new FirefoxDriver();
+		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
 		public static String TaskRequest="NoChoice";
 		public static String CRM = "NoChoice";
