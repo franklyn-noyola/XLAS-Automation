@@ -11,7 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class CourseCatalogTemplate {
-		public static String driveriePath = "C:\\selenium";
+		public static String driveriePath = "C:\\selenium\\";
 		public static WebDriver driver =  new InternetExplorerDriver();
 		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
