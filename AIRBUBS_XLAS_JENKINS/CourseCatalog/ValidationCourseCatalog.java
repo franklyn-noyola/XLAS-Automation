@@ -10,7 +10,6 @@ public void ValidationCourse() throws Exception  {
 			MainTask = "Course Catalog";
 			CourseType = "Validation";
 			StandardCourseCatalogCreation.CourseStandard();		
-			CourseExecution();
 			System.out.println(RequesTask + " Validation Course Catalog has been created and sent to Active");
 			driver.quit();
 			    			  					  		

@@ -13,7 +13,6 @@ public void UrgentDeliveryData() throws Exception  {
 			CourseType = "UrgentAndDelivery";
 			StandardCourseCatalogCreation.CourseStandard();
 		    Thread.sleep(1500);
-		    CourseExecution();
 			System.out.println(RequesTask + " Urgent and Delivery Data Course Catalog has been created and sent to Pending Delivery Data");
 			driver.quit();
 			    			  					  		

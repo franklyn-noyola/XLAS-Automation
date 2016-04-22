@@ -13,7 +13,6 @@ public void UrgentCourse() throws Exception  {
 			CourseType = "UrgentOnly";
 			StandardCourseCatalogCreation.CourseStandard();
 		    Thread.sleep(2000);
-		    CourseExecution();
 			System.out.println(RequesTask + " Urgent Course Catalog has been created and sent to Active");
 			driver.quit();
 			    			  					  		
