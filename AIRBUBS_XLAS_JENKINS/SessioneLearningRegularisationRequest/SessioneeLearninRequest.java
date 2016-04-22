@@ -15,7 +15,11 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 					Login();
 					Thread.sleep(2000);
 					driver.findElement(By.id("summary")).sendKeys("Session eLearning creaed via Automation Script");
-					driver.findElement(By.id("customfield_12000")).sendKeys("Additional Information");										
+					driver.findElement(By.id("customfield_12000")).sendKeys("Additional Information");	
+					driver.findElement(By.id("attachment_box")).click();
+					Thread.sleep(1000);
+					Runtime.getRuntime().exec("C:\\Program Files\\Jenkins\\workspace\\eLearningandRegularissation.exe");
+					Thread.sleep(1000);
 					driver.findElement(By.id("customfield_10086-4")).click();
 					driver.findElement(By.id(CreateButton)).click();
 					Thread.sleep(2000);
