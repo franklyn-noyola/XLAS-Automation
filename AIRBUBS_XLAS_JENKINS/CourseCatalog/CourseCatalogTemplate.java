@@ -6,13 +6,12 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.fail;
 
 import org.openqa.selenium.*;
-//import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class CourseCatalogTemplate {
-		public static String driveriePath = "C:\\selenium\\";
-		public static WebDriver driver =  new InternetExplorerDriver();
+		
+		public static WebDriver driver =  new FirefoxDriver();
 		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
 		public static String TaskRequest="NoChoice";
@@ -44,8 +43,7 @@ public class CourseCatalogTemplate {
 		public static String RequestType;
 		
 
-public static void setUp() throws Exception {
-	System.setProperty("webdriver.ie.driver", driveriePath+"IEDriverServer.exe");	
+public static void setUp() throws Exception {		
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 	
