@@ -45,8 +45,7 @@ public class CourseCatalogTemplate {
 		
 
 public static void setUp() throws Exception {
-	System.setProperty("webdriver.ie.driver", driveriePath+"IEDriverServer.exe");
-	driver = new InternetExplorerDriver();
+	System.setProperty("webdriver.ie.driver", driveriePath+"IEDriverServer.exe");	
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 	
