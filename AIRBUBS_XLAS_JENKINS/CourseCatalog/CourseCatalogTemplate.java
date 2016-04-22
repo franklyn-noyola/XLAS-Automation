@@ -53,7 +53,7 @@ public static void Login() throws Exception{
 			Thread.sleep(200);
 			setUp();
 			driver.get(baseUrl);
-			if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints")){
+			if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints") || driver.getPageSource().contains("El Servidor Proxy")){
 				System.out.println("XLAs is not available");
 				driver.quit();
 				fail("XLAS is not available");
