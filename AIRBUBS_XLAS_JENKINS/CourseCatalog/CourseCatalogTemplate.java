@@ -502,8 +502,6 @@ public static void Login() throws Exception{
 		  		DateValidation = DateValidation.substring(6, 10);
 		  		DataValidation = Integer.parseInt(DateValidation);
 		  		Thread.sleep(4000);	
-		  		System.out.println(UrgentConfirmation);
-		  		System.out.println(DeliveryConfirmation);
 				if (!UrgentConfirmation.equals("Yes")){
 					if (DataValidation > 2016 && Classroom.equals("Classroom training")){
 						driver.findElement(By.id("action_id_261")).click(); //Send to Pending Validation 
