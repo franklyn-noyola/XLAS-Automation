@@ -19,7 +19,7 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 					driver.findElement(By.id("attachment_box")).click();
 					Thread.sleep(1000);
 					Runtime.getRuntime().exec("C:\\Program Files\\Jenkins\\workspace\\eLearningandRegularissation.exe");
-					Thread.sleep(1000);
+					Thread.sleep(2000);
 					driver.findElement(By.id("customfield_10086-4")).click();
 					driver.findElement(By.id(CreateButton)).click();
 					Thread.sleep(2000);
