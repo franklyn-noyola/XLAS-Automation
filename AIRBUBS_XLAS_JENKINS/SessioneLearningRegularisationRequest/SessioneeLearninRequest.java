@@ -22,7 +22,7 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 					Thread.sleep(2000);
 					driver.findElement(By.id("customfield_10086-4")).click();
 					driver.findElement(By.id(CreateButton)).click();
-					Thread.sleep(2000);
+					Thread.sleep(4000);
 					RequesTask = driver.findElement(By.id("key-val")).getText();
 					eLearningWorkflow();
 					System.out.println(RequesTask + " Session E-Learning Request has been created and sent to Completed");

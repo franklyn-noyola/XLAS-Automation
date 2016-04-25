@@ -22,7 +22,7 @@ public class SessionRegularisationgRequest extends CourseCatalog.CourseCatalogTe
 					Thread.sleep(2000);
 					driver.findElement(By.id("customfield_10086-3")).click();
 					driver.findElement(By.id(CreateButton)).click();
-					Thread.sleep(2000);					
+					Thread.sleep(4000);					
 					RequesTask = driver.findElement(By.id("key-val")).getText();
 					RegularisationWorkflow();
 					System.out.println(RequesTask + " Session Regularisation Request has been created and sent to Completed");
