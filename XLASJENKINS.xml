@@ -41,11 +41,14 @@
         <pathelement location="../../../../selenium/selenium-2.52.0/selenium-java-2.52.0.jar"/>
         <pathelement location="../../../../selenium/selenium-2.52.0/selenium-java-2.52.0-srcs.jar"/>
         <pathelement location="../../../../selenium/selenium-server-standalone-2.52.0.jar"/>
+        <pathelement location="../../../Java/jre1.8.0_91/lib/serializer-2.7.2.jar"/>
+        <pathelement location="../../../Java/jre1.8.0_91/lib/xalan-2.7.2.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="AIRBUBS_XLAS_JENKINS">
+                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
