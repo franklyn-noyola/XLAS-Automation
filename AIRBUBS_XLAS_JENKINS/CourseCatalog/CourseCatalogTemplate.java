@@ -51,7 +51,7 @@ public static void setUp() throws Exception {
 
 
 public static void Login() throws Exception{
-			Thread.sleep(200);
+			Thread.sleep(1000);
 			setUp();
 			driver.get(baseUrl);
 			if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints") || driver.getPageSource().contains("El Servidor Proxy")){
@@ -60,7 +60,7 @@ public static void Login() throws Exception{
 				fail("XLAS is not available");
 				return;
 			}
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			driver.switchTo().frame("gadget-0"); 
 			driver.findElement(By.id("login-form-username")).sendKeys("TEST_AUTOMATION");
 			driver.findElement(By.id("login-form-password")).sendKeys("TEST_AUTOMATION");
