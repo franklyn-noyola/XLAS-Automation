@@ -682,8 +682,6 @@ public static void Login() throws Exception{
 		}else{
 			Thread.sleep(4000);
 			driver.findElement(By.id("action_id_351")).click();			
-			Thread.sleep(6000);
-			DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
 			Thread.sleep(7000);
 			Random rand = new Random();
 			int SAP = rand.nextInt(60000000)+1;
