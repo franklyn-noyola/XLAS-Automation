@@ -12,6 +12,7 @@ package SubTasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 public class SubTasksWorkFlow extends SessionCatalog.SessionCatalogTemplate{
 		
@@ -26,6 +27,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 }
 
 	public static void SubtasksWorkflowExecution() throws Exception{
+		try{
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Catering Order")).click();
 		Workflow = "Workflow1";
@@ -115,9 +117,13 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 	Thread.sleep(2000);
 	System.out.println(SessionId+" sent to Complete with all Subtasks created");
 	driver.quit();
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 }
 	
   public static void SubTaskWorkflow() throws Exception{
+	  try{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
 		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
@@ -140,10 +146,14 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 											driver.findElement(By.id("action_id_61")).click();											
 											break;
 		}
+	  } catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 
 	}
   
   public static void VendorManagement() throws Exception{
+	  try{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
 		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
@@ -165,10 +175,14 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 											driver.findElement(By.id("action_id_61")).click();
 											break;
 			}
+	  } catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 
 	}
   
   public static void SessionOverviewFormW() throws Exception{
+	  try{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
 		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
@@ -218,6 +232,9 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 													Thread.sleep(2000);
 													break;	
 			}
+	  } catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 
 	}
   

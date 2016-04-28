@@ -12,6 +12,7 @@ package SubTasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 public class SubTasksWorkFlowCancelled extends SessionCatalog.SessionCatalogTemplate{
 		
@@ -26,6 +27,7 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 }
 
 	public static void SubtasksWorkflowExecution() throws Exception{
+		try{
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Catering Order")).click();
 		Workflow = "Workflow1";
@@ -115,9 +117,13 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 	Thread.sleep(2000);
 	System.out.println(SessionId+" was Cancelled with all Subtasks cancelled");
 	driver.quit();
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 }
 	
   public static void SubTaskWorkflow() throws Exception{
+	  try{
 	  Thread.sleep(3000);
 		Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
 		if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
@@ -148,7 +154,10 @@ public void SubtasksWorkflowExecutionInit() throws Exception{
 			Thread.sleep(3000);
 			return;
 		}
-		
+	  } catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
+	  
 			}
 
 	

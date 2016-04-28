@@ -13,6 +13,7 @@ package SubTasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.Select;
 
 public class SubTasksCreation extends SessionCatalog.SessionCatalogTemplate{
@@ -24,13 +25,18 @@ public class SubTasksCreation extends SessionCatalog.SessionCatalogTemplate{
 
 @Test
 public void SubtasksCreationExecution() throws Exception{
+	try{
 			SessionChoice = "SubTaskCreation";
 			SessionCatalog.SessionCatalogCompleted.SessionCatalogCompletedExecution();
 			Thread.sleep(1000);
 			SubtasksCreation();
+	} catch (NoSuchElementException e){
+		e.printStackTrace();
+	}		
 }
 
 public static void SubtasksCreation() throws Exception{
+	try{
 		Thread.sleep(1000);
 		CateringOrder();
 		Thread.sleep(1000);
@@ -61,9 +67,13 @@ public static void SubtasksCreation() throws Exception{
     	}
 		System.out.println(SessionId +" with all SubTasks has been created correctly");
 		driver.quit();
-		return;				
+		return;			
+	} catch (NoSuchElementException e){
+		e.printStackTrace();
+	}	
 }
 	public static void CateringOrder() throws Exception{
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -92,9 +102,13 @@ public static void SubtasksCreation() throws Exception{
 	  new Select (driver.findElement(By.id("customfield_10172"))).selectByVisibleText("EURO"); 
 	  driver.findElement(By.id(CreateSub)).click();
 	  Thread.sleep(3000);
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}
 
 	public static void Communication() throws Exception{	
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -112,10 +126,14 @@ public static void SubtasksCreation() throws Exception{
 	    new Select(driver.findElement(By.id("customfield_10123"))).selectByVisibleText("Individual");
 	    driver.findElement(By.id(CreateSub)).click();
 	    Thread.sleep(3000);
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	
 	}
 
 	public static void Registration() throws Exception{
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -130,12 +148,16 @@ public static void SubtasksCreation() throws Exception{
 	    driver.findElement(By.id(TimeDays)).sendKeys("16");
 	    new Select(driver.findElement(By.id(TimeHappening))).selectByIndex(1);        
 	    driver.findElement(By.id(CreateSub)).click();
-	    Thread.sleep(3000);		
+	    Thread.sleep(3000);	
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}
 
 
 	//Custom Task Subtask
 	public static void CustomSubTask() throws Exception{	
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -152,11 +174,15 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id("customfield_11102")).clear();
 		    driver.findElement(By.id("customfield_11102")).sendKeys("10");
 		    driver.findElement(By.id(CreateSub)).click();
-		    Thread.sleep(3000);		
+		    Thread.sleep(3000);	
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}
 
 	//Course Material
 	public static void CourseMaterial() throws Exception{
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -179,11 +205,15 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id("customfield_11102")).sendKeys("10");
 		    driver.findElement(By.id(CreateSub)).click();
 		    Thread.sleep(5000);
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 		 
 	}  
 
 	//Instructor Booking
 		public static void InstructorBooking() throws Exception{
+			try{
 			Thread.sleep(3000);			
 	  		driver.findElement(By.id("opsbar-operations_more")).click();
 	  		driver.findElement(By.id("create-subtask")).click();
@@ -203,10 +233,14 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id("customfield_11102")).sendKeys("10");
 		    driver.findElement(By.id(CreateSub)).click();
 		    Thread.sleep(3000);		    
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 	}
 
 	//Joining Instructions
 		public static void JoiningInstructions() throws Exception{
+			try{
 			Thread.sleep(3000);			
 	  		driver.findElement(By.id("opsbar-operations_more")).click();
 	  		driver.findElement(By.id("create-subtask")).click();
@@ -226,11 +260,15 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id("customfield_10967")).sendKeys("This has been selected by Joining Instructions");
 		    driver.findElement(By.id(CreateSub)).click();
 		    Thread.sleep(3000);
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		    
 	}
 
 	//Attendance Sheet Delivery
 	public static void SignIn() throws Exception{
+		try{
 		Thread.sleep(3000);		
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -245,11 +283,15 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id(TimeDays)).sendKeys("18");
 		    new Select(driver.findElement(By.id(TimeHappening))).selectByIndex(2); 
 		    driver.findElement(By.id(CreateSub)).click();
-		    Thread.sleep(3000);		    
+		    Thread.sleep(3000);
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}
 
 	//Vendor Management
 	public static void VendorManagement() throws Exception{
+		try{
 		Thread.sleep(3000);
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -266,11 +308,15 @@ public static void SubtasksCreation() throws Exception{
 		    new Select(driver.findElement(By.id(TimeHappening))).selectByIndex(2); 
 		    driver.findElement(By.id(CreateSub)).click(); 
 		    Thread.sleep(3000);
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 		   
 	}
 
 	//Session Overview Form
-			public static void AGSessionOverview() throws Exception{								
+			public static void AGSessionOverview() throws Exception{
+				try{
 				Thread.sleep(3000);				
 		  		driver.findElement(By.id("opsbar-operations_more")).click();
 		  		driver.findElement(By.id("create-subtask")).click();
@@ -313,10 +359,14 @@ public static void SubtasksCreation() throws Exception{
 						driver.findElement(By.id("customfield_11036")).sendKeys("Other requirements");
 						driver.findElement(By.id(CreateSub)).click();
 						Thread.sleep(3500);
+				} catch (NoSuchElementException e){
+					e.printStackTrace();
+				}
 						
 			}
 
-			public static void XeroxSessionOverview() throws Exception{								
+			public static void XeroxSessionOverview() throws Exception{	
+				try{
 				Thread.sleep(3000);				
 		  		driver.findElement(By.id("opsbar-operations_more")).click();
 		  		driver.findElement(By.id("create-subtask")).click();
@@ -359,11 +409,15 @@ public static void SubtasksCreation() throws Exception{
 						driver.findElement(By.id("customfield_11036")).sendKeys("Other requirements");
 						driver.findElement(By.id(CreateSub)).click();
 						Thread.sleep(3500);
+				} catch (NoSuchElementException e){
+					e.printStackTrace();
+				}
 						
 			}			
 			
 	//VenueBooking
 	public static void VenueBooking() throws Exception{
+		try{
 		Thread.sleep(3000);
   		driver.findElement(By.id("opsbar-operations_more")).click();
   		driver.findElement(By.id("create-subtask")).click();
@@ -452,6 +506,9 @@ public static void SubtasksCreation() throws Exception{
 		    driver.findElement(By.id("customfield_10120")).sendKeys("6521142"); //PO/Invoice Number
 		    driver.findElement(By.id(CreateSub)).click();
 		    Thread.sleep(3000);		
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 		  	} 
 		    
 		    
