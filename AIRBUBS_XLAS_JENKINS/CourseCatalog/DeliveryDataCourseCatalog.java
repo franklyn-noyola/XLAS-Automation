@@ -15,6 +15,7 @@ package CourseCatalog;
 
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 
@@ -28,6 +29,7 @@ public void DeliveryDataInit() throws Exception  {
 		DeliveryData();
 }
 public static void DeliveryData() throws Exception  {
+			try{
 				StandardCourseCatalogCreation.CourseStandard();
 		    	Thread.sleep(2000);		    	
 		    	if (CRM.equals("Course Modification Request")){
@@ -35,7 +37,10 @@ public static void DeliveryData() throws Exception  {
 		    	}else{
 		    		System.out.println(RequesTask + " Delivery Data Course Catalog has been created and sent to Pending Delivery Data");
 		    		driver.quit();
-		    	}			  					  		
+		    	}		
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}	
 		  }
 	
 			

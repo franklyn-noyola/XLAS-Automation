@@ -11,6 +11,7 @@
 package CourseCatalog;
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 
@@ -21,10 +22,14 @@ public class UrgentCourseCatalog extends CourseCatalogTemplate{
 public void UrgentCourse() throws Exception  {
 			MainTask = "Course Catalog";
 			CourseType = "UrgentOnly";
+			try{
 			StandardCourseCatalogCreation.CourseStandard();
 		    Thread.sleep(2000);
 			System.out.println(RequesTask + " Urgent Course Catalog has been created and sent to Active");
 			driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 			    			  					  		
 		  }
 	

@@ -11,6 +11,7 @@
 package CourseCatalog;
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 public class ValidationCourseCatalog extends CourseCatalogTemplate{
@@ -19,9 +20,13 @@ public class ValidationCourseCatalog extends CourseCatalogTemplate{
 public void ValidationCourse() throws Exception  {
 			MainTask = "Course Catalog";
 			CourseType = "Validation";
+			try{
 			StandardCourseCatalogCreation.CourseStandard();		
 			System.out.println(RequesTask + " Validation Course Catalog has been created and sent to Active");
 			driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 			    			  					  		
 		  }
 	
