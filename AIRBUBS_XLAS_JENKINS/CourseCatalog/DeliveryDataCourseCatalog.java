@@ -23,12 +23,12 @@ public class DeliveryDataCourseCatalog extends CourseCatalogTemplate{
 	
 
 @Test
-public void DeliveryDataInit() throws Exception  {
-		CourseType = "DeliveryDataOnly";
+public void DeliveryDataInit() throws Exception  {		
 		MainTask = "Course Catalog";
 		DeliveryData();
 }
 public static void DeliveryData() throws Exception  {
+			CourseType = "DeliveryDataOnly";
 			try{
 				StandardCourseCatalogCreation.CourseStandard();
 		    	Thread.sleep(2000);		    	

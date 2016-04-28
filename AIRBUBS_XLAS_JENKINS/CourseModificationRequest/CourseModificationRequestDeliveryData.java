@@ -26,7 +26,7 @@ public class CourseModificationRequestDeliveryData extends CourseModificationReq
 	public  void CourseModificationRequest() throws Exception{
 				MainTask = "Course Catalog";
 				CRM = "Course Modification Request";
-				ValidationData = "DeliveryData";
+				ValidationData = "DeliveryData";				
 				try{
 				CourseCatalog.DeliveryDataCourseCatalog.DeliveryData();									
 		    	Thread.sleep(3000);		    			    	
