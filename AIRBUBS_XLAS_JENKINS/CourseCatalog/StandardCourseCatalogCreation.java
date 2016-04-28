@@ -31,6 +31,7 @@ public void CourseStandardExecution () throws Exception  {
  public static void CourseStandard() throws Exception  {
 	 				Thread.sleep(2000);
 					Login();
+			try{		
 					Thread.sleep(2000);				  					  		
 			  		GeneralTab();
 			  		if (CourseType.equals("DeliveryDataOnly")){
@@ -94,6 +95,11 @@ public void CourseStandardExecution () throws Exception  {
 		    				Thread.sleep(1500);
 		    				System.out.println(RequesTask + " Course Catalog has been created and sent to Active");
 		    				driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
+	
+	    				
 		    		  }
 	
 		
