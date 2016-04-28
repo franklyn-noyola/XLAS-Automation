@@ -72,11 +72,11 @@ public static void Login() throws Exception{
 				return;	
 			}	
 			Thread.sleep(2000);			
-			driver.findElement(By.linkText("Log In")).click();
+			driver.switchTo().frame("gadget-0");
 			Thread.sleep(1000);
 			driver.findElement(By.id("login-form-username")).sendKeys("TEST_AUTOMATION");
 			driver.findElement(By.id("login-form-password")).sendKeys("TEST_AUTOMATION");
-			driver.findElement(By.name("login")).click();
+			driver.findElement(By.id("login")).click();
 			Thread.sleep(2000);
 			
 	  		driver.findElement(By.id("create_link")).click();
