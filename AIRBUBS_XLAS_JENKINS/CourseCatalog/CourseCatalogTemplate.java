@@ -1,9 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2016 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
 package CourseCatalog;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.fail;
+import  static org.junit.Assert.fail;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -50,7 +60,7 @@ public static void setUp() throws Exception {
 		}
 
 
-/*public static void Login() throws Exception{
+public static void Login() throws Exception{
 			Thread.sleep(1000);
 			setUp();
 			driver.get(baseUrl);
@@ -85,7 +95,7 @@ public static void setUp() throws Exception {
 	  		driver.findElement(By.id(CreateButton)).click();
 
 
-}*/	
+}	
 
 
 	public static void GeneralTab() throws Exception{
