@@ -104,6 +104,7 @@ public static void Login() throws Exception{
 
 
 	public static void GeneralTab() throws Exception{
+		try{
 		Thread.sleep(1000);	
 		driver.findElement(By.id("summary")).sendKeys("Course created via Automation Script");
 		new Select (driver.findElement(By.id("customfield_10164"))).selectByVisibleText("E_ENGINEERING"); //Training Domain
@@ -160,10 +161,13 @@ public static void Login() throws Exception{
 		Thread.sleep(3000);
 		new Select (driver.findElement(By.id("customfield_10131"))).selectByVisibleText("Yes"); //Business Critical
 		driver.findElement(By.id("customfield_10877")).sendKeys("Further Comments"); //Further Comments			
-	
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}	
 	}
 	
 		public static void ScheduleTab() throws Exception{
+		try{	
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab6']")).click();
 			driver.findElement(By.id("customfield_10061")).sendKeys("15"); //Duration/Days
@@ -173,10 +177,14 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("customfield_10879"))).selectByVisibleText("Yes"); //Is schedule defined?
 			driver.findElement(By.id("customfield_10880")).sendKeys("If schedule is defined then enter schedule (current year)"); //If schedule is defined then enter schedule (current year)
 			driver.findElement(By.id("customfield_10881")).sendKeys("If schedule is defined then enter schedule (year N+1)"); //If schedule is defined then enter schedule (year N+1)
-			driver.findElement(By.id("customfield_10864")).sendKeys("Training duration distribution"); //Training duration distribution					
+			driver.findElement(By.id("customfield_10864")).sendKeys("Training duration distribution"); //Training duration distribution
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 		}
 		
 		public static void AccessibilityTab() throws Exception{
+			try{
 			Thread.sleep(1000);		
 			driver.findElement(By.xpath("//a[@href='#tab7']")).click();
 			Thread.sleep(2000);
@@ -203,9 +211,13 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("customfield_10867"))).selectByVisibleText("Yes");//Visible External
 			new Select(driver.findElement(By.id("customfield_10868"))).selectByVisibleText("No");//Visible OffShore
 			Thread.sleep(2000);
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 
 		public static void ResourcesTab() throws Exception{
+			try{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//a[@href='#tab8']")).click();
 			driver.findElement(By.id("customfield_10889")).sendKeys("954111"); //Learning Development Specialist / SAP IDRequired
@@ -248,9 +260,13 @@ public static void Login() throws Exception{
 			Thread.sleep(3000);
 			driver.findElement(By.id("customfield_10874")).sendKeys("Trainer additional comment"); //Trainer additional comment
 			Thread.sleep(2000);
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 
 		public static void DeliveryDataTab() throws Exception{
+			try{
 			Thread.sleep(1000);
 			if (ValidationData.equals("DeliveryData")){
 				driver.findElement(By.xpath("//a[@href='#tab-8']")).click();
@@ -284,21 +300,28 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10154")).sendKeys("Comments: Software"); //Comments: Software
 			new Select(driver.findElement(By.id("customfield_10857"))).selectByVisibleText("Yes"); //Network needed?Required
 			driver.findElement(By.id("customfield_10155")).sendKeys("Comments: Network"); //Comments: Network
-			
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}	
 		
 		public static void NonDeliveryDataTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab9']")).click();			
 			new Select(driver.findElement(By.id("customfield_10847"))).selectByVisibleText("None"); //Catering - Is there any specific catering request?
 			new Select(driver.findElement(By.id("customfield_10850"))).selectByVisibleText("None"); //Hardware - IT equipped room needed?Required
 			new Select(driver.findElement(By.id("customfield_10851"))).selectByVisibleText("None"); //Hardware - Trainer brings his own PC?Required
 			new Select(driver.findElement(By.id("customfield_10853"))).selectByVisibleText("None"); //Software - If PC are provided, adhere to Airbus Group master?
-			new Select(driver.findElement(By.id("customfield_10854"))).selectByVisibleText("None"); //Software - Is there any specific software needed?Required			
+			new Select(driver.findElement(By.id("customfield_10854"))).selectByVisibleText("None"); //Software - Is there any specific software needed?Required
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 			
 		}	
 		
 		public static void UKTab() throws Exception{
+			try{
 			Thread.sleep(800);
 			driver.findElement(By.xpath("//a[@href='#tab2']")).click();
 			driver.findElement(By.id("customfield_10860")).sendKeys("Franklyn Noyola"); //Training Program Title UK
@@ -308,10 +331,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10009")).sendKeys("Objectives UK");//Objectives UK
 			driver.findElement(By.id("customfield_10010")).sendKeys("Prerequisite UK (Notes)");//Prerequisite UK (Notes)
 			driver.findElement(By.id("customfield_10978")).sendKeys("Franklyn Noyola");//Target Population UK
-			
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void SPTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab3']")).click();
 			driver.findElement(By.id("customfield_10863")).sendKeys("Franklyn Noyola"); //Training Program Title SP
@@ -321,9 +347,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10018")).sendKeys("Objectives SP");//Objectives SP
 			driver.findElement(By.id("customfield_10019")).sendKeys("Prerequisite SP (Notes)");//Prerequisite SP (Notes)
 			driver.findElement(By.id("customfield_10981")).sendKeys("Franklyn Noyola");//Target Population SP
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void FRTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab4']")).click();
 			driver.findElement(By.id("customfield_10861")).sendKeys("Franklyn Noyola"); //Training Program Title FR
@@ -333,10 +363,14 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10027")).sendKeys("Objectives FR");//Objectives FR
 			driver.findElement(By.id("customfield_10028")).sendKeys("Prerequisite FR (Notes)");//Prerequisite FR (Notes)
 			driver.findElement(By.id("customfield_10979")).sendKeys("Franklyn Noyola");//Target Population FR
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 			
 		}
 		
 		public static void GETab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab5']")).click();
 			driver.findElement(By.id("customfield_10862")).sendKeys("Franklyn Noyola"); //Training Program Title GE
@@ -346,9 +380,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10036")).sendKeys("Objectives GE");//Objectives GE
 			driver.findElement(By.id("customfield_10037")).sendKeys("Prerequisite GE (Notes)");//Prerequisite GE (Notes)
 			driver.findElement(By.id("customfield_10980")).sendKeys("Franklyn Noyola");//Target Population GE
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void PricesInternationalTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.id("customfield_10952")).sendKeys("10");
 			driver.findElement(By.id("customfield_11301")).sendKeys("10");
@@ -365,9 +403,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10946")).sendKeys("10");
 			driver.findElement(By.id("customfield_10968")).sendKeys("10");
 			driver.findElement(By.id("customfield_10973")).sendKeys("10");*/
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void PricesUKTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab2']")).click();
 			driver.findElement(By.id("customfield_10953")).sendKeys("10");
@@ -376,10 +418,14 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_11312")).sendKeys("10");	
 			driver.findElement(By.id("customfield_10942")).sendKeys("10");			
 			driver.findElement(By.id("customfield_10818")).sendKeys("10");
-			driver.findElement(By.id("customfield_10819")).sendKeys("10");			
+			driver.findElement(By.id("customfield_10819")).sendKeys("10");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 	
 		public static void PricesSPTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab3']")).click();
 			driver.findElement(By.id("customfield_10954")).sendKeys("10");			
@@ -388,10 +434,14 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_11314")).sendKeys("10");			
 			driver.findElement(By.id("customfield_10943")).sendKeys("10");			
 			driver.findElement(By.id("customfield_10814")).sendKeys("10");			
-			driver.findElement(By.id("customfield_10815")).sendKeys("10");						
+			driver.findElement(By.id("customfield_10815")).sendKeys("10");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 
 		}		
 		public static void PricesFRTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab4']")).click();
 			driver.findElement(By.id("customfield_10955")).sendKeys("10");
@@ -400,10 +450,14 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_11315")).sendKeys("10");
 			driver.findElement(By.id("customfield_10944")).sendKeys("10");
 			driver.findElement(By.id("customfield_10816")).sendKeys("10");
-			driver.findElement(By.id("customfield_10817")).sendKeys("10");			
+			driver.findElement(By.id("customfield_10817")).sendKeys("10");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}	
 		
 		public static void PricesGETab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab5']")).click();
 			driver.findElement(By.id("customfield_10956")).sendKeys("10");			
@@ -412,12 +466,15 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_11316")).sendKeys("10");
 			driver.findElement(By.id("customfield_10945")).sendKeys("10");
 			driver.findElement(By.id("customfield_10820")).sendKeys("10");
-			driver.findElement(By.id("customfield_10821")).sendKeys("10");			
+			driver.findElement(By.id("customfield_10821")).sendKeys("10");	
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void NextPricesInternationalTab() throws Exception{
-			Thread.sleep(100);
-			
+			try{
+			Thread.sleep(100);			
 			driver.findElement(By.id("customfield_12582")).sendKeys("20");
 			driver.findElement(By.id("customfield_12305")).sendKeys("25");
 			driver.findElement(By.id("customfield_12310")).sendKeys("30");
@@ -433,9 +490,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12360")).sendKeys("112");
 			driver.findElement(By.id("customfield_12365")).sendKeys("141");
 			driver.findElement(By.id("customfield_12366-1")).click();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 		
 		public static void NextPricesUKTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab2']")).click();
 			driver.findElement(By.id("customfield_12301")).sendKeys("15");			
@@ -451,9 +512,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12351")).sendKeys("15");
 			driver.findElement(By.id("customfield_12356")).sendKeys("15");
 			driver.findElement(By.id("customfield_12361")).sendKeys("15");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 	
 		public static void NextPricesSPTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab3']")).click();
 			driver.findElement(By.id("customfield_12303")).sendKeys("14");			
@@ -469,9 +534,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12352")).sendKeys("47");			
 			driver.findElement(By.id("customfield_12357")).sendKeys("41");			
 			driver.findElement(By.id("customfield_12362")).sendKeys("73");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 
 		}		
 		public static void NextPricesFRTab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab4']")).click();
 			driver.findElement(By.id("customfield_12302")).sendKeys("11");
@@ -487,9 +556,13 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12353")).sendKeys("321");
 			driver.findElement(By.id("customfield_12358")).sendKeys("121");
 			driver.findElement(By.id("customfield_12363")).sendKeys("32");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 
 		}	
 		public static void NextPricesGETab() throws Exception{
+			try{
 			Thread.sleep(100);
 			driver.findElement(By.xpath("//a[@href='#tab5']")).click();
 			driver.findElement(By.id("customfield_12304")).sendKeys("55");
@@ -505,10 +578,14 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12354")).sendKeys("111");
 			driver.findElement(By.id("customfield_12359")).sendKeys("113");
 			driver.findElement(By.id("customfield_12364")).sendKeys("115");
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 		}
 
 
-	public static void CourseExecution() throws Exception{				
+	public static void CourseExecution() throws Exception{
+		try{
 				Thread.sleep(5000);				
 				UrgentConfirmation = driver.findElement(By.id("customfield_11500-val")).getText();
 				DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
@@ -628,6 +705,9 @@ public static void Login() throws Exception{
 			}
 		}
 	}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 		  	}
 	}	
 
