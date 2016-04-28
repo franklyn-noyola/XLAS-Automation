@@ -643,10 +643,10 @@ public static void Login() throws Exception{
 																	driver.findElement(By.id("action_id_31")).click();
 				case "WAITING FOR LMS ENTRY":						Thread.sleep(4000);
 																	driver.findElement(By.id("action_id_41")).click();												
-				case "LMS ENTRY IN PROGRESS":						Thread.sleep(1000);
+				case "LMS ENTRY IN PROGRESS":						Thread.sleep(3000);
 																	int SAP = rand.nextInt(60000000)+1;
 																	SAPID = Integer.toString(SAP);
-																	Thread.sleep(4000);
+																	Thread.sleep(5000);
 																	if(DeliveryConfirmation.equals("Yes")){
 																		driver.findElement(By.id("action_id_291")).click();
 																		Thread.sleep(1000);
