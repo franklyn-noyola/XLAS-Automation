@@ -96,7 +96,7 @@ public static void Login() throws Exception{
 	  		driver.findElement(By.id(CreateButton)).click();
 		} catch (NoSuchElementException e){
 				e.printStackTrace();
-				fail("Element is not found");
+				fail("Element No found");
 			}
 
 }	
@@ -162,6 +162,7 @@ public static void Login() throws Exception{
 		driver.findElement(By.id("customfield_10877")).sendKeys("Further Comments"); //Further Comments			
 		} catch (NoSuchElementException e){
 			e.printStackTrace();
+			fail("Element No Found");
 		}	
 	}
 	
@@ -179,6 +180,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10864")).sendKeys("Training duration distribution"); //Training duration distribution
 		} catch (NoSuchElementException e){
 			e.printStackTrace();
+			fail("Element No Found");
 		}
 		}
 		
@@ -212,6 +214,7 @@ public static void Login() throws Exception{
 			Thread.sleep(2000);
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 
@@ -261,6 +264,7 @@ public static void Login() throws Exception{
 			Thread.sleep(2000);
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 
@@ -301,6 +305,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10155")).sendKeys("Comments: Network"); //Comments: Network
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}	
 		
@@ -315,6 +320,7 @@ public static void Login() throws Exception{
 			new Select(driver.findElement(By.id("customfield_10854"))).selectByVisibleText("None"); //Software - Is there any specific software needed?Required
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 			
 		}	
@@ -332,6 +338,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10978")).sendKeys("Franklyn Noyola");//Target Population UK
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 		
@@ -348,6 +355,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10981")).sendKeys("Franklyn Noyola");//Target Population SP
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 		
@@ -364,6 +372,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10979")).sendKeys("Franklyn Noyola");//Target Population FR
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 			
 		}
@@ -381,6 +390,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10980")).sendKeys("Franklyn Noyola");//Target Population GE
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 		
@@ -404,6 +414,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10973")).sendKeys("10");*/
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 		
@@ -420,6 +431,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10819")).sendKeys("10");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 	
@@ -436,6 +448,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10815")).sendKeys("10");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 
 		}		
@@ -452,6 +465,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10817")).sendKeys("10");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}	
 		
@@ -491,6 +505,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12366-1")).click();
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 		
@@ -513,6 +528,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12361")).sendKeys("15");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 	
@@ -535,6 +551,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12362")).sendKeys("73");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 
 		}		
@@ -579,6 +596,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_12364")).sendKeys("115");
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element No Found");
 			}
 		}
 
@@ -706,6 +724,7 @@ public static void Login() throws Exception{
 	}
 		} catch (NoSuchElementException e){
 			e.printStackTrace();
+			fail("Element No Found");
 		}
 		  	}
 	}	
