@@ -12,6 +12,8 @@ package SessioneLearningRegularisationRequest;
 
 
 
+import static org.junit.Assert.fail;
+
 import org.junit.Test;
 import org.openqa.selenium.*;
 
@@ -79,6 +81,7 @@ public static void RegularisationWorkflow() throws Exception{
 					 
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail ("Test failed due to some elements are not found or Execution Tiemout ");
 			}
 				  }
 	

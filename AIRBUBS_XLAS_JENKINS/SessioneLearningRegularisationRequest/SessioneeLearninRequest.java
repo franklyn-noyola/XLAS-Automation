@@ -12,6 +12,8 @@ package SessioneLearningRegularisationRequest;
 
 
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.openqa.selenium.*;
 
@@ -40,6 +42,7 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 			    	driver.quit();
 			} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail ("Test failed due to some elements are not found or Execution Tiemout ");
 			}	
 		  }
 	
