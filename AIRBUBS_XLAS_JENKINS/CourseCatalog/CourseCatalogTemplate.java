@@ -98,6 +98,7 @@ public static void Login() throws Exception{
 	  		driver.findElement(By.id(CreateButton)).click();
 		} catch (NoSuchElementException e){
 				e.printStackTrace();
+				fail("Element is not found");
 			}
 
 }	
