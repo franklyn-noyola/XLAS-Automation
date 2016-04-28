@@ -22,6 +22,7 @@ public class SessionRegularisationgRequest extends CourseCatalog.CourseCatalogTe
  public void SessioneRegularisationCreation() throws Exception  {
 					MainTask = "Session Requests";
 					RequestType = "Session Regularisation Request";
+			try{		
 					Login();
 					Thread.sleep(2000);
 					driver.findElement(By.id("summary")).sendKeys("Session Regularisation created via Automation Script");
@@ -36,10 +37,14 @@ public class SessionRegularisationgRequest extends CourseCatalog.CourseCatalogTe
 					RequesTask = driver.findElement(By.id("key-val")).getText();
 					RegularisationWorkflow();
 					System.out.println(RequesTask + " Session Regularisation Request has been created and sent to Completed");
-			    	driver.quit();			  					  		
+			    	driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			} 	
 		  }
 	
 public static void RegularisationWorkflow() throws Exception{
+			try{
 					Thread.sleep(1000);
 					  Stat = driver.findElement(By.id("status-val")).getText();
 					  Assignee = driver.findElement(By.id("assignee-val")).getText();
@@ -71,7 +76,10 @@ public static void RegularisationWorkflow() throws Exception{
 																					break;															
 					
 					}
-					  
+					 
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 				  }
 	
 	

@@ -23,6 +23,7 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 					MainTask = "Session Requests";
 					RequestType = "Session E-Learning Request";
 					Login();
+			try{		
 					Thread.sleep(2000);
 					driver.findElement(By.id("summary")).sendKeys("Session eLearning creaed via Automation Script");
 					driver.findElement(By.id("customfield_12000")).sendKeys("Additional Information");	
@@ -36,10 +37,14 @@ public class SessioneeLearninRequest extends CourseCatalog.CourseCatalogTemplate
 					RequesTask = driver.findElement(By.id("key-val")).getText();
 					eLearningWorkflow();
 					System.out.println(RequesTask + " Session E-Learning Request has been created and sent to Completed");
-			    	driver.quit();			  					  		
+			    	driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}	
 		  }
 	
 public static void eLearningWorkflow() throws Exception{
+		try{
 					Thread.sleep(1000);
 					  Stat = driver.findElement(By.id("status-val")).getText();
 					  Assignee = driver.findElement(By.id("assignee-val")).getText();
@@ -66,7 +71,10 @@ public static void eLearningWorkflow() throws Exception{
 																					break;															
 					
 					}
-					  
+
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}			
 				  }
 	
 	

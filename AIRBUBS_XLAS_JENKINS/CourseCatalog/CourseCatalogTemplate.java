@@ -104,7 +104,7 @@ public static void Login() throws Exception{
 
 
 	public static void GeneralTab() throws Exception{
-		Thread.sleep(1000);
+		Thread.sleep(1000);	
 		driver.findElement(By.id("summary")).sendKeys("Course created via Automation Script");
 		new Select (driver.findElement(By.id("customfield_10164"))).selectByVisibleText("E_ENGINEERING"); //Training Domain
 		new Select (driver.findElement(By.id("customfield_10164:1"))).selectByValue("10164");//Training Subdomain
@@ -160,7 +160,7 @@ public static void Login() throws Exception{
 		Thread.sleep(3000);
 		new Select (driver.findElement(By.id("customfield_10131"))).selectByVisibleText("Yes"); //Business Critical
 		driver.findElement(By.id("customfield_10877")).sendKeys("Further Comments"); //Further Comments			
-		
+	
 	}
 	
 		public static void ScheduleTab() throws Exception{

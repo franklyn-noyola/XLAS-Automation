@@ -27,6 +27,7 @@ public class CustomTask extends CourseCatalog.CourseCatalogTemplate{
 					MainTask = "Custom Requests";
 					RequestType = "Custom Task";
 					Login();
+			try{		
 					driver.findElement(By.id("summary")).sendKeys("Custom Task created via Automation Script");
 					driver.findElement(By.id("customfield_10113")).sendKeys("In search engine optimization, on-page optimization refers to factors that have an effect on your Web site or Web page listing in natural search results. These factors are controlled by you or by coding on your page. Examples of on-page optimization include actual HTML code, meta tags, keyword placement and keyword density.");
 					driver.findElement(By.id("duedate")).sendKeys("1/Jan/2016");
@@ -40,10 +41,14 @@ public class CustomTask extends CourseCatalog.CourseCatalogTemplate{
 					Thread.sleep(1000);
 					CustomTaskWorkflow();
 					System.out.println(RequesTask + " Custom Task has been created and sent to Completed");
-			    	driver.quit();			  					  		
+			    	driver.quit();
+			} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}  	
 		  }
 	
 public static void CustomTaskWorkflow() throws Exception{
+		try{
 					Thread.sleep(1000);
 					  Stat = driver.findElement(By.id("status-val")).getText();
 					  Assignee = driver.findElement(By.id("assignee-val")).getText();
@@ -64,7 +69,10 @@ public static void CustomTaskWorkflow() throws Exception{
 															break;
 					
 					}
-					  
+					
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 				  }
 	
 	
