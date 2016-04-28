@@ -13,6 +13,7 @@ package SessionCatalog;
 
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 public class SessionCatalogCancellation extends SessionCatalogTemplate {
@@ -23,13 +24,17 @@ public class SessionCatalogCancellation extends SessionCatalogTemplate {
 				MainTask = "Course Catalog";
 				SessionChoice = "Cancellation";
 				TaskRequest = "Session";
+				try{
 				Thread.sleep(1000);								
 				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();				
 				Thread.sleep(3000);		  						  					  		
 		    	SessionCatalogExecution();	    	
 		    	Thread.sleep(4000);
 		    	System.out.println(SessionId + " Session Catalog has been created and has been Cancelled");
-		    	driver.quit();		
+		    	driver.quit();	
+				} catch (NoSuchElementException e){
+					e.printStackTrace();
+				}
 	}	
 
 }

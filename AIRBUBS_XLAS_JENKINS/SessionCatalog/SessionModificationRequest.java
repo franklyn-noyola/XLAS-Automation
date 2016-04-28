@@ -19,6 +19,7 @@ public class SessionModificationRequest extends SessionCatalogTemplate{
 
 @Test		
 public void SessionModificationRequestCreation() throws Exception{
+	try{
 		Thread.sleep(500);
 		MainTask = "Course Catalog";
 		TaskRequest = "Session";
@@ -32,9 +33,13 @@ public void SessionModificationRequestCreation() throws Exception{
     	Thread.sleep(1500);
     	System.out.println(RequesTask + " Session Modification Request has been created and sent to Completed, Pending for Synchronization");
     	driver.quit();
-	}   
+	} catch (NoSuchElementException e){
+		e.printStackTrace();
+	}
+}   
 	
 	public static void SessionModificationRequestExecution() throws Exception{	
+		try{
 				Thread.sleep(3000);
 				driver.findElement(By.cssSelector("span.icon.drop-menu")).click();
 				Thread.sleep(1000);
@@ -68,6 +73,9 @@ public void SessionModificationRequestCreation() throws Exception{
 																	Thread.sleep(1000);	
 																	break;
 				}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}	
 	}		
 				
 		}

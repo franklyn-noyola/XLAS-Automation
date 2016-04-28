@@ -25,6 +25,7 @@ public class SessionCatalogTemplate extends CourseCatalog.CourseCatalogTemplate{
 		public static String Status;
 
 public static void SessionFields() throws Exception{
+	try{
 	Thread.sleep(1000);
 	driver.findElement(By.id("customfield_10706")).click();
 	Thread.sleep(1000);
@@ -72,11 +73,15 @@ public static void SessionFields() throws Exception{
 	driver.findElement(By.id("sData")).click();
 	Thread.sleep(1000);
 	driver.findElement(By.id("cData")).click();
+	} catch (NoSuchElementException e){
+		e.printStackTrace();
+	}
 
 }
 
 
 	public static void SessionCatalogExecution() throws Exception{
+		try{
 				Thread.sleep(3000);
 				driver.findElement(By.cssSelector("span.icon.drop-menu")).click();
 				Thread.sleep(3000);
@@ -175,12 +180,18 @@ public static void SessionFields() throws Exception{
 																			}
 				}
 																				break;
+
+																				
 				}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 				
 	}		
 
 	
 	public static void SessionWCompleted() throws Exception{
+		try{
 				Thread.sleep(2000);
 				StatR = driver.findElement(By.id("status-val")).getText();
 				switch (StatR){
@@ -201,9 +212,13 @@ public static void SessionFields() throws Exception{
 																				break;
 													
 				}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}
 	
 	public static void SessionWCancellation() throws Exception{
+		try{
 		Thread.sleep(3000);
 		StatR = driver.findElement(By.id("status-val")).getText();		
 		switch (StatR){
@@ -234,6 +249,9 @@ public static void SessionFields() throws Exception{
 																		break;
 																	
 											
+			}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
 		}
 }
 	

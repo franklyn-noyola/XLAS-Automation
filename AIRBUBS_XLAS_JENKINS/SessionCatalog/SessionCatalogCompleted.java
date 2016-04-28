@@ -14,6 +14,7 @@ package SessionCatalog;
 
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 
@@ -25,6 +26,7 @@ public class SessionCatalogCompleted extends SessionCatalogTemplate {
 				SessionCatalogCompletedExecution();
 }
 	public static void SessionCatalogCompletedExecution() throws Exception{
+		try{
 				MainTask = "Course Catalog";
 				TaskRequest = "Session";
 				Thread.sleep(1000);				
@@ -36,7 +38,10 @@ public class SessionCatalogCompleted extends SessionCatalogTemplate {
 		    	}
 		    	Thread.sleep(400);
 		    	System.out.println(SessionId + " Session Catalog has been created and sent to Completed");
-		    	driver.quit();		
+		    	driver.quit();	
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}	
 
 }
