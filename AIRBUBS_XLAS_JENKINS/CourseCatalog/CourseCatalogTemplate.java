@@ -50,7 +50,7 @@ public static void setUp() throws Exception {
 		}
 
 
-public static void Login() throws Exception{
+/*public static void Login() throws Exception{
 			Thread.sleep(1000);
 			setUp();
 			driver.get(baseUrl);
@@ -85,7 +85,7 @@ public static void Login() throws Exception{
 	  		driver.findElement(By.id(CreateButton)).click();
 
 
-}	
+}*/	
 
 
 	public static void GeneralTab() throws Exception{

@@ -47,37 +47,39 @@ public static void setUp() throws Exception {
 
 
 public static void Login() throws Exception{
-			Thread.sleep(200);
-			setUp();
-			driver.get(baseUrl);
-			if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints")){
-				System.out.println("XLAs is not available");
-				driver.quit();
-				fail("XLAS is not available");
-				return;
-			}
-			Thread.sleep(1000);
-			driver.switchTo().frame("gadget-0"); 
-			driver.findElement(By.id("login-form-username")).sendKeys("TEST_AGX");
-			driver.findElement(By.id("login-form-password")).sendKeys("TEST_AGX");
-			driver.findElement(By.id("login")).click();
-			Thread.sleep(2000);				  		
-	  		driver.findElement(By.id("create_link")).click();
-	  		Thread.sleep(2000);	  		
-	  		driver.findElement(By.id("project-field")).click();
-	  		driver.findElement(By.id("project-field")).clear();
-	  		driver.findElement(By.id("project-field")).sendKeys(MainTask);
-	  		Thread.sleep(1000);
-	  		driver.findElement(By.cssSelector("em")).click();
-	  		Thread.sleep(2000);
-	  		if (!MainTask.equals("Course Catalog")){
-	  			driver.findElement(By.id("issuetype-field")).click();
-	  			driver.findElement(By.id("issuetype-field")).clear();
-	  			driver.findElement(By.id("issuetype-field")).sendKeys(RequestType);
-	  			driver.findElement(By.xpath("//div[@id='issuetype-suggestions']/div/ul/li/a/em")).click();
-		  		Thread.sleep(3000);
-	  		}
-	  		driver.findElement(By.id(CreateButton)).click();
+	Thread.sleep(1000);
+	setUp();
+	driver.get(baseUrl);
+	if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints") || driver.getPageSource().contains("El Servidor Proxy")){
+		System.out.println("XLAs is not available");
+		driver.quit();
+		fail("XLAS is not available");
+		return;
+	}
+	Thread.sleep(2000);			
+	driver.findElement(By.linkText("Log In")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.id("login-form-username")).sendKeys("TEST_AUTOMATION");
+	driver.findElement(By.id("login-form-password")).sendKeys("TEST_AUTOMATION");
+	driver.findElement(By.name("login")).click();
+	Thread.sleep(2000);				  		
+		driver.findElement(By.id("create_link")).click();
+		Thread.sleep(2000);	  		
+		driver.findElement(By.id("project-field")).click();
+		driver.findElement(By.id("project-field")).clear();
+		driver.findElement(By.id("project-field")).sendKeys(MainTask);
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("em")).click();
+		Thread.sleep(2000);
+		if (!MainTask.equals("Course Catalog")){
+			driver.findElement(By.id("issuetype-field")).click();
+			driver.findElement(By.id("issuetype-field")).clear();
+			driver.findElement(By.id("issuetype-field")).sendKeys(RequestType);
+			driver.findElement(By.xpath("//div[@id='issuetype-suggestions']/div/ul/li/a/em")).click();
+  		Thread.sleep(3000);
+		}
+		driver.findElement(By.id(CreateButton)).click();
+
 
 
 }	
