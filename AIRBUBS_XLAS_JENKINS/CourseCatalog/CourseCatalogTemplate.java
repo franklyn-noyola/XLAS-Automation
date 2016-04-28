@@ -63,6 +63,7 @@ public static void setUp() throws Exception {
 public static void Login() throws Exception{
 			Thread.sleep(1000);
 			setUp();
+			try{
 			driver.get(baseUrl);
 			if (driver.getPageSource().contains("Service Unavailable") ||driver.getPageSource().contains("JIRA Startup Failed") || driver.getPageSource().contains("JIRA Access Constraints") || driver.getPageSource().contains("El Servidor Proxy")){
 				System.out.println("XLAs is not available");
@@ -76,7 +77,10 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("login-form-username")).sendKeys("TEST_AUTOMATION");
 			driver.findElement(By.id("login-form-password")).sendKeys("TEST_AUTOMATION");
 			driver.findElement(By.name("login")).click();
-			Thread.sleep(2000);				  		
+			Thread.sleep(2000);
+			}catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 	  		driver.findElement(By.id("create_link")).click();
 	  		Thread.sleep(2000);	  		
 	  		driver.findElement(By.id("project-field")).click();
