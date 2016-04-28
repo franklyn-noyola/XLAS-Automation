@@ -15,6 +15,7 @@ package CourseModificationRequest;
 
 
 import org.junit.Test;
+import org.openqa.selenium.NoSuchElementException;
 
 
 
@@ -24,13 +25,17 @@ public class StandardCourseModificationRequest extends CourseModificationRequest
 @Test		
 	public  void CourseModificationRequest() throws Exception{
 				MainTask = "Course Catalog";
-				CRM = "Course Modification Request";				
+				CRM = "Course Modification Request";
+				try{
 				CourseCatalog.StandardCourseCatalogCreation.CourseStandard();											    	
 		    	Thread.sleep(3000);		    	
 		    	CourseModificationRequestExecution();
 		    	Thread.sleep(1500);
 		    	System.out.println(RequesTask + " Course Modification Request has been created and sent to Completed, Pending for Synchronization");
 		    	driver.quit();		
+				} catch (NoSuchElementException e){
+					e.printStackTrace();
+				}
 	}	
 
 

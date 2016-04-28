@@ -19,6 +19,7 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 		public static String StatR;
 		
 	public static void CourseModificationRequestExecution() throws Exception{
+		try{
 				Thread.sleep(3000);
 				driver.findElement(By.cssSelector("span.icon.drop-menu")).click();
 				driver.findElement(By.id("clone-issue-custom3-plus")).click();
@@ -86,6 +87,9 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 																	driver.findElement(By.id("action_id_91")).click();
 																	Thread.sleep(1000);																																	
 				}
+		} catch (NoSuchElementException e){
+			e.printStackTrace();
+		}
 	}		
 				
 		}
