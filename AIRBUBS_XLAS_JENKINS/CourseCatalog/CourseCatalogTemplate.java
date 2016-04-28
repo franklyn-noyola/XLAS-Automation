@@ -605,6 +605,7 @@ public static void Login() throws Exception{
 		try{
 				Thread.sleep(5000);				
 				UrgentConfirmation = driver.findElement(By.id("customfield_11500-val")).getText();
+				Thread.sleep(2000);				
 				DeliveryConfirmation = driver.findElement(By.id("customfield_11400-val")).getText();
 				Thread.sleep(2000);
 				Classroom = driver.findElement(By.id("customfield_10832-val")).getText();
