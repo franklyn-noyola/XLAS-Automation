@@ -69,8 +69,8 @@ public static void Login() throws Exception{
 				System.out.println("XLAs is not available");
 				driver.quit();
 				fail("XLAS is not available");
-				return;
-			}
+				return;	
+			}	
 			Thread.sleep(2000);			
 			driver.findElement(By.linkText("Log In")).click();
 			Thread.sleep(1000);
@@ -78,9 +78,7 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("login-form-password")).sendKeys("TEST_AUTOMATION");
 			driver.findElement(By.name("login")).click();
 			Thread.sleep(2000);
-			}catch (NoSuchElementException e){
-				e.printStackTrace();
-			}
+			
 	  		driver.findElement(By.id("create_link")).click();
 	  		Thread.sleep(2000);	  		
 	  		driver.findElement(By.id("project-field")).click();
@@ -96,8 +94,11 @@ public static void Login() throws Exception{
 	  			driver.findElement(By.xpath("//div[@id='issuetype-suggestions']/div/ul/li/a/em")).click();
 		  		Thread.sleep(3000);
 	  		}
+	  		
 	  		driver.findElement(By.id(CreateButton)).click();
-
+		} catch (NoSuchElementException e){
+				e.printStackTrace();
+			}
 
 }	
 
