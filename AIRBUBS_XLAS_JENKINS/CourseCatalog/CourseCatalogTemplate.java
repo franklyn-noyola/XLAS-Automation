@@ -28,7 +28,7 @@ public class CourseCatalogTemplate {
 		public static String CRM = "NoChoice";
 		public static String EndD1 = "31/Dec/2017";
 		public static String Project;
-		public String Main_Task = "COURSE CATALOG";
+		public static String Main_Task = "COURSE CATALOG";
 		public static String CreateButton 	= "issue-create-submit";
 		public static boolean DupKey = false;
 		public static boolean NoAvailable = false;
