@@ -72,13 +72,9 @@ public class CourseModificationRequestTemplate extends CourseCatalog.CourseCatal
 					StatR = driver.findElement(By.id("status-val")).getText();
 					
 				switch(StatR){													
-				case "PENDING QUALITY CHECK":						Thread.sleep(3000);
-																			Assignee = driver.findElement(By.id("assignee-val")).getText();	 					
-																			if (!Assignee.equals("TEST AUTOMATION USER: XLAS Full Access")){
-																				driver.findElement(By.id("assign-to-me")).click();
-																				Thread.sleep(4000);
-																			}						
-																			Thread.sleep(2000);
+				case "PENDING QUALITY CHECK":						Thread.sleep(4000);
+																	driver.findElement(By.id("assign-to-me")).click();
+																	Thread.sleep(2000);
 																	driver.findElement(By.id("action_id_21")).click();
 				case "QUALITY CHECK IN PROGRESS":					Thread.sleep(4000);
 																	driver.findElement(By.id("action_id_101")).click();
