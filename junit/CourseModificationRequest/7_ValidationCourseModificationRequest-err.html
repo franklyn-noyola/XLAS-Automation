@@ -1,0 +1,56 @@
+<html xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Error from ValidationCourseModificationRequest</title>
+</head>
+<body>
+<pre>org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+:false,"size":31568737,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":true,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"1.0+","maxVersion":"99.*.*.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":0,"seen":true}
+1462796444571	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"8aFnxJ_9VYk1","location":"app-global","version":"46.0.1","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\C9854448\\AppData\\Local\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1462532993659,"updateDate":1462532993659,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"46.0.1","maxVersion":"46.0.1"}],"targetPlatforms":[],"seen":true}
+1462796444571	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1462796444572	DeferredSave.extensions.json	DEBUG	Save changes
+1462796444572	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1462796444572	addons.xpi-utils	DEBUG	Updating add-on states
+1462796444579	addons.xpi-utils	DEBUG	Writing add-ons list
+1462796445009	addons.xpi	DEBUG	Registering manifest for C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1462796445010	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1462796445011	addons.xpi	DEBUG	Registering manifest for C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1462796445012	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0
+1462796445013	addons.xpi	DEBUG	Registering manifest for C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1462796445015	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.2.6
+1462796445037	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1462796445037	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1462796445037	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1462796445038	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1462796445038	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1462796445038	addons.manager	DEBUG	Starting provider: GMPProvider
+1462796445044	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1462796445045	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1462796445045	addons.manager	DEBUG	Starting provider: PluginProvider
+1462796445045	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1462796445045	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1462796445046	addons.manager	DEBUG	Completed startup sequence
+1462796456400	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1462796456400	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1462796456400	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1462796466330	DeferredSave.extensions.json	DEBUG	Write succeeded
+1462796466330	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1462796466331	DeferredSave.extensions.json	DEBUG	Starting timer
+1462796467354	DeferredSave.extensions.json	DEBUG	Starting write
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+	at CourseCatalog.CourseCatalogTemplate.&lt;clinit&gt;(CourseCatalogTemplate.java:24)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:374)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+</pre>
+</body>
+</html>

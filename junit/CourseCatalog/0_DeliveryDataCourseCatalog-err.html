@@ -1,0 +1,58 @@
+<html xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Error from DeliveryDataCourseCatalog</title>
+</head>
+<body>
+<pre>org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+rovider.jsm
+1462784513767	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1462784513768	addons.manager	DEBUG	Starting provider: XPIProvider
+1462784513768	addons.xpi	DEBUG	startup
+1462784513769	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Windows\TEMP\anonymous6744730794625243677webdriver-profile\extensions\fxdriver@googlecode.com
+1462784513770	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Windows\TEMP\anonymous6744730794625243677webdriver-profile\extensions\webdriver-staging
+1462784513770	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1462784513772	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1462784513772	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1462784513773	addons.xpi	INFO	Mapping loop@mozilla.org to C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1462784513973	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Users\C9854448\AppData\Local\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1462784513974	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1462784513974	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1462784513974	addons.xpi	DEBUG	checkForChanges
+1462784513975	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1462784513976	addons.xpi	DEBUG	New add-on fxdriver@googlecode.com in app-profile
+1462784513976	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1462784513994	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1462784513995	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1462784513996	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1462784513996	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1462784513997	addons.xpi	DEBUG	New add-on loop@mozilla.org in app-system-defaults
+1462784513997	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1462784513999	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1462784513999	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1462784514000	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Windows\\TEMP\\anonymous6744730794625243677webdriver-profile\\extensions\\fxdriver@googlecode.com","st":1462784440701,"mt":1462784427275}},"app-system-defaults":{"e10srollout@mozilla.org":{"d":"C:\\Users\\C9854448\\AppData\\Local\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","st":1462532996640},"firefox@getpocket.com":{"d":"C:\\Users\\C9854448\\AppData\\Local\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","st":1462532996640},"loop@mozilla.org":{"d":"C:\\Users\\C9854448\\AppData\\Local\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","st":1462532993549}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Users\\C9854448\\AppData\\Local\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1462532993659}}}
+1462784514023	addons.xpi-utils	DEBUG	Opening XPI database C:\Windows\TEMP\anonymous6744730794625243677webdriver-profile\extensions.json
+1462784514025	addons.xpi-utils	DEBUG	New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1462784514303	DeferredSave.extensions.json	DEBUG	Save changes
+1462784514303	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1462784514323	DeferredSave.extensions.json	DEBUG	Starting timer
+1462784514324	DeferredSave.extensions.json	DEBUG	Save changes
+1462784514324	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+	at CourseCatalog.CourseCatalogTemplate.&lt;clinit&gt;(CourseCatalogTemplate.java:24)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:374)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+</pre>
+</body>
+</html>
