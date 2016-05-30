@@ -10,6 +10,7 @@
  *******************************************************************************/
 package CourseCatalog;
 
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -24,6 +25,8 @@ public class CourseCatalogTemplate {
 		public static WebDriver driver =  new FirefoxDriver();
 		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
+		public static WebElement selectOption;
+		public static int countr;
 		public static String TaskRequest="NoChoice";
 		public static String CRM = "NoChoice";
 		public static String EndD1 = "31/Dec/2017";
@@ -726,6 +729,25 @@ public static void Login() throws Exception{
 			fail("Element No Found");
 		}
 		  	}
+	
+	public static void optionsSelectDropdown (String id){
+		selectOption = new Select(driver.findElement(By.id(id)));
+		List<WebElement> lT = selectOption.getOptions();
+		lT.size();
+			Random rn = new Random();
+			countr = lT.size();
+				for (int i = 0; i<1; i++){
+						ETSel = rn.nextInt(countr);
+						if (ETSel == 0){
+							ETSel = ETSel + 1;
+						}
+				}				
+		new Select(driver.findElement(By.id(id))).selectByIndex(ETSel);
+		
+		
+		
+	}
+	
 	}	
 
 
