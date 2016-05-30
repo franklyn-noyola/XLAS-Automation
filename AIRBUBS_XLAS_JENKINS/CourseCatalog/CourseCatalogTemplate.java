@@ -119,10 +119,10 @@ public static void Login() throws Exception{
 		driver.findElement(By.id("customfield_10004")).sendKeys("31/Dec/2016");//Validity End Date
 		new Select (driver.findElement(By.id("customfield_10832"))).selectByValue("10761");//Learning Method
 		new Select (driver.findElement(By.id("customfield_10882"))).selectByVisibleText("Yes");//COTS
-		new Select (driver.findElement(By.id("customfield_10804"))).selectByValue("10734");//Deployment Actor
-		new Select (driver.findElement(By.id("customfield_10805"))).selectByVisibleText("CPF");//Training Type
-		new Select (driver.findElement(By.id("customfield_10806"))).selectByVisibleText("INTER");//INTER/INTRA
-		new Select (driver.findElement(By.id("customfield_10810"))).selectByValue("10751");//Seat Based
+		optionsSelectDropdown ("customfield_10804"); //Deployment Actor
+		optionsSelectDropdown ("customfield_10805"); //Training Type		
+		optionsSelectDropdown ("customfield_10806"); //INTER/INTRA
+		optionsSelectDropdown ("customfield_10810"); //Seat Beased		
 		driver.findElement(By.id("customfield_10071")).sendKeys("10"); //Number of Participants Minimum
 		driver.findElement(By.id("customfield_10073")).sendKeys("10");//Number of Participants Optimum
 		driver.findElement(By.id("customfield_10072")).sendKeys("10");//Number of Participants Maximum
