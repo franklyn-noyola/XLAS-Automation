@@ -152,9 +152,9 @@ public static void Login() throws Exception{
 		//Start Cost Center Grid.
 		driver.findElement(By.cssSelector("span.ui-icon.ui-icon-plus")).click();	
 		Thread.sleep(2000);
-		new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AI (Airbus)");
+		optionsSelectDropdown ("Division");		
 		Thread.sleep(1000);
-		new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Spain");
+		optionsSelectDropdown ("Country");		
 		driver.findElement(By.id("CostCenter")).sendKeys("1245788");
 		driver.findElement(By.id("ControllingArea")).sendKeys("65874545");
 		driver.findElement(By.id(SubmitGrid)).click();
@@ -193,19 +193,19 @@ public static void Login() throws Exception{
 			Thread.sleep(1000);		
 			driver.findElement(By.xpath("//a[@href='#tab7']")).click();
 			Thread.sleep(2000);
-			//Accessibility Grid starts
+			//Accessibility Grid starts			
 			driver.findElement(By.cssSelector("#add_customfield_10087_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
 			Thread.sleep(2000);
-			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AH (Airbus Helicopters)");	
+			optionsSelectDropdown ("Division");				
 			Thread.sleep(2000);
-			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Finland");
+			optionsSelectDropdown ("Country");			
 			Thread.sleep(2000);
 			driver.findElement(By.id("OrgUnit")).sendKeys("121212");
 			driver.findElement(By.id("PersonalArea")).sendKeys("1212212");
 			driver.findElement(By.id("PersonalSubarea")).sendKeys("121212");
-			new Select(driver.findElement(By.id("BandLevel"))).selectByVisibleText("Executive");
-			new Select(driver.findElement(By.id("WorkingTimeException"))).selectByVisibleText("86 %");
-			new Select(driver.findElement(By.id("InternalExternal"))).selectByVisibleText("Internal");
+			optionsSelectDropdown ("BandLevel");
+			optionsSelectDropdown ("WorkingTimeException");
+			optionsSelectDropdown ("InternalExternal");			
 			driver.findElement(By.id(SubmitGrid)).click();
 			Thread.sleep(4000);
 			driver.findElement(By.id(CancelGrid)).click();
@@ -234,9 +234,9 @@ public static void Login() throws Exception{
 			//Training Provider Grid Starts
 			driver.findElement(By.cssSelector("#add_customfield_10984_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
 			Thread.sleep(1000);
-			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("AD&S - (Airbus Defense & Space)");
-			Thread.sleep(1000);
-			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("France");
+			optionsSelectDropdown ("Division");				
+			Thread.sleep(2000);
+			optionsSelectDropdown ("Country");				
 			Thread.sleep(1000);
 			driver.findElement(By.id("SapId")).sendKeys("6543223");
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
@@ -252,13 +252,25 @@ public static void Login() throws Exception{
 			//Trainer (Internal and External) grid starts
 			driver.findElement(By.cssSelector("#add_customfield_10985_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
 			Thread.sleep(1000);
-			new Select(driver.findElement(By.id("InternalExternal"))).selectByVisibleText("Internal");
+			optionsSelectDropdown ("InternalExternal");				
 			Thread.sleep(2000);
-			new Select(driver.findElement(By.id("Division"))).selectByVisibleText("HQ (Airbus Group corporate)");
-			new Select(driver.findElement(By.id("Country"))).selectByVisibleText("Worldwide");
+			optionsSelectDropdown ("Division");				
+			Thread.sleep(2000);
+			optionsSelectDropdown ("Country");		
 			driver.findElement(By.id("SapId")).sendKeys("5488787");
 			driver.findElement(By.id("Name")).sendKeys("Franklyn Noyola");
 			driver.findElement(By.id("Email")).sendKeys("franklyn.noyola@xerox.com");
+			Thread.sleep(1000);
+			optionsSelectDropdown ("InternalTrainerCompany");	
+			Thread.sleep(1000);
+			driver.findElement(By.id("ExternalTrainerDivision")).sendKeys("Xerox Company");
+			Thread.sleep(1000);
+			optionsSelectDropdown ("TrainerCountry");
+			Thread.sleep(1000);
+			optionsSelectDropdown ("TrainerCity");
+			Thread.sleep(1000);
+			driver.findElement(By.id("LanguageDelivery")).sendKeys("EN");
+			Thread.sleep(1000);
 			driver.findElement(By.id(SubmitGrid)).click();
 			Thread.sleep(3000);
 			driver.findElement(By.id(CancelGrid)).click();
@@ -283,16 +295,17 @@ public static void Login() throws Exception{
 			Thread.sleep(200);
 			new Select(driver.findElement(By.id("customfield_10958"))).selectByVisibleText("Yes"); //Any training course material delivered?
 			driver.findElement(By.id("customfield_10960")).sendKeys("Who is responsible for content and storage of the course material?"); //Who is responsible for content and storage of the course material?
-			new Select(driver.findElement(By.id("customfield_10959"))).selectByVisibleText("Xerox prints and send material"); //Who delivers the course material?
-			driver.findElement(By.id("customfield_10835")).sendKeys("Listing of training material & Printing specification (if any)Required"); //Listing of training material & Printing specification (if any)Required
-			new Select(driver.findElement(By.id("customfield_10837"))).selectByVisibleText("No"); //Who delivers the course material?
+			optionsSelectDropdown ("customfield_10959");//Who delivers the course material?
+			driver.findElement(By.id("customfield_10835")).sendKeys("Listing of training material & Printing specification (if any)Required"); //Listing of training material & Printing specification (if any)Required			
+			driver.findElement(By.id("customfield_10158")).sendKeys("Comments: Course Material"); //Comments: Course Material
+			new Select(driver.findElement(By.id("customfield_10837"))).selectByVisibleText("No"); //Does the training require pre-course work?
 			driver.findElement(By.id("customfield_10141")).sendKeys("If yes, specify the pre-course work detailsRequired"); //If yes, specify the pre-course work detailsRequired
 			driver.findElement(By.id("customfield_10836")).sendKeys("Post-training material"); //Post-training material
-			driver.findElement(By.id("customfield_10158")).sendKeys("Comments: Course Material"); //Comments: Course Material
+			driver.findElement(By.id("customfield_10967")).sendKeys("Comments: Joining Instructions"); //Comments: Joining Instructions
 			driver.findElement(By.id("customfield_10964")).sendKeys("10"); //Room settings for the Main Room (Capacity)
-			new Select(driver.findElement(By.id("customfield_10961"))).selectByVisibleText("Empty"); //Room settings for the Main Room (Configuration)Required
+			optionsSelectDropdown ("customfield_10961");//Room settings for the Main Room (Configuration)Required			
 			driver.findElement(By.id("customfield_10962")).sendKeys("15"); //Room settings for the Break-out Room 1 (Capacity)
-			new Select(driver.findElement(By.id("customfield_10963"))).selectByVisibleText("Block"); //Room settings for the Break-out Room 1 (Configuration)Required
+			optionsSelectDropdown ("customfield_10963");////Room settings for the Break-out Room 1 (Configuration)Required				
 			new Select(driver.findElement(By.id("customfield_10965"))).selectByVisibleText("Yes"); //Are there needed equipment(s) for the main room?Required
 			driver.findElement(By.id("customfield_10966")).sendKeys("If yes, then what are these needed equipments"); //If yes, then what are these needed equipments
 			driver.findElement(By.id("customfield_10150")).sendKeys("Comments: Room"); //Comments: Room
