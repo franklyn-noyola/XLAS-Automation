@@ -25,8 +25,9 @@ public class CourseCatalogTemplate {
 		public static WebDriver driver =  new FirefoxDriver();
 		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
-		public static WebElement selectOption;
+		public static Select selectOption;
 		public static int countr;
+		public static int ETSel;
 		public static String TaskRequest="NoChoice";
 		public static String CRM = "NoChoice";
 		public static String EndD1 = "31/Dec/2017";
