@@ -110,9 +110,9 @@ public static void Login() throws Exception{
 		try{
 		Thread.sleep(1000);	
 		driver.findElement(By.id("summary")).sendKeys("Course created via Automation Script");
-		new Select (driver.findElement(By.id("customfield_10164"))).selectByVisibleText("E_ENGINEERING"); //Training Domain
-		new Select (driver.findElement(By.id("customfield_10164:1"))).selectByValue("10164");//Training Subdomain
-		new Select (driver.findElement(By.id("customfield_10859"))).selectByValue("11501");//ABR
+		optionsSelectDropdown ("customfield_10164"); //Training Domain
+		optionsSelectDropdown ("customfield_10164:1"); //Training Subdomain
+		optionsSelectDropdown ("customfield_10859"); //ABR
 		driver.findElement(By.id("customfield_10003")).clear();
 		driver.findElement(By.id("customfield_10003")).sendKeys("1/Jan/2016");//Validity Start Date
 		driver.findElement(By.id("customfield_10004")).clear();
