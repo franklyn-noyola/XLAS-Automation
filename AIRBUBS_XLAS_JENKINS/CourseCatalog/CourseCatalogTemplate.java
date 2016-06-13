@@ -17,12 +17,13 @@ import java.util.concurrent.TimeUnit;
 import  static org.junit.Assert.fail;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class CourseCatalogTemplate {
-		
-		public static WebDriver driver =  new FirefoxDriver();
+		public static WebDriver driver = new ChromeDriver();
+		//public static WebDriver driver =  new FirefoxDriver();
 		public static String CourseType = "StandardCourse";
 		public static String ValidationData = "NoValidation";
 		public static Select selectOption;
@@ -57,7 +58,8 @@ public class CourseCatalogTemplate {
 		public static String RequestType;
 		
 
-public static void setUp() throws Exception {		
+public static void setUp() throws Exception {
+	System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 	
@@ -205,7 +207,9 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("PersonalSubarea")).sendKeys("121212");
 			optionsSelectDropdown ("BandLevel");
 			optionsSelectDropdown ("WorkingTimeException");
-			optionsSelectDropdown ("InternalExternal");			
+			Thread.sleep(2000);
+			optionsSelectDropdown ("InternalExternal");
+			Thread.sleep(3000);
 			driver.findElement(By.id(SubmitGrid)).click();
 			Thread.sleep(4000);
 			driver.findElement(By.id(CancelGrid)).click();
@@ -251,9 +255,9 @@ public static void Login() throws Exception{
 			driver.findElement(By.id("customfield_10873")).sendKeys("Training Provider additional comment"); //Training Provider additional comment
 			//Trainer (Internal and External) grid starts
 			driver.findElement(By.cssSelector("#add_customfield_10985_grid > div.ui-pg-div > span.ui-icon.ui-icon-plus")).click();
-			Thread.sleep(1000);
-			optionsSelectDropdown ("InternalExternal");				
 			Thread.sleep(2000);
+			optionsSelectDropdown ("InternalExternal");				
+			Thread.sleep(3000);
 			optionsSelectDropdown ("Division");				
 			Thread.sleep(2000);
 			optionsSelectDropdown ("Country");		
